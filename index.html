@@ -1,189 +1,941 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 	
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="Wietse Verhagen">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Howdy FED2526</title>
+	<title>What is Minecraft?</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 
 <body>
-	<nav>
-		<img src="images/logaster-2020-06-image14-3.png" alt="Minecraft logo" width="..." height="...">
-	</nav>
-	<section> <!-- section 0-->
-		<h1>Create. Explore. Survive</h1>
-		<button>
+	
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/images/logaster-2020-06-image14-3.png" alt="Minecraft logo" class="MC_nav_logo">
+      </div>
+  
+      <div class="nav-actions">
+        <a href="marketplace.html" class="buy-btn">BUY <span>➔</span></a>
+        <button class="menu-btn">☰</button>
+      </div>
+    </nav>
+  </header>
 
-		</button>
-		<button>
 
+<section class="landpagina"> <!-- section 0 	"start pagina"-->
+	<video autoplay muted loop id="background_video">
+		<source class="main_video" src="videos/Screen Recording 2025-09-10 at 16.15.17.mov" type="video/mp4">
+	</video>
+		<h2 class="MC_Heading_1">Create. Explore. Survive.</h2>
+		<button class="scroll_button">
+			<a href="#scrollstop" class="MC_Button"><p>Dig Deeper</p></a>
 		</button>
+
+		 <button class="MC_Animation_toggle" aria-hidden="true">  <!-- Moet hidden zijn -->
+			<div >Enable Animations</div>
+		</button>
+		
 	</section>
 	
-	<section> <!-- section 1-->
-		<h2>Minecraft Platforms + Game Features</h2>
+<section> <!-- section 1 	"platforms"-->
+		<h2 class="MC_Heading_2" id="scrollstop">
+			Minecraft Platforms + Game Features
+	</h2>
 
-		<button>
-			<span>
-
-			</span>
+		<button class="MC_Tabs_tablist_tab">
+			<p>
+				Platforms
+			</p>
 		</button>
 		<button>
-			<span>
-
-			</span>
+			<p>
+				Features
+			</p>
 		</button>
 
 		<p>
+			Buy Minecraft: Java & Bedrock Edition* and get both versions of the game for the price of one. You can easily switch between Java and Bedrock Edition using the unified launcher and cross-play with any current version of Minecraft, including consoles and mobile. Learn more about the different Minecraft editions.
+		</p>
+		<p>
 
+		</p>
+		<p>
+			*macOS and Linux are compatible with Minecraft: Java Edition only.
 		</p>
 	</section>
 
-	<section> <!-- section 2-->
+<section> <!-- section 2 	"purchase menu"-->
 		<ul>
-			<li>
-				<img src="images/buy-platform-icon.png" alt="buy icon" width="..." height="...">
-				<P>
-
-				</P>
-				<a>
-
+			<li class="MC_PurchaseMenu">
+				<img src="images/buy-platform-icon.png" alt="buy icon">
+				<p class="MC_PurchaseMenu_text">
+						Windows/Mac/Linux*
+				</p>
+				<a class="MC_Button MC_Button_transparent MC_Glyph_Link_B" href="/store/minecraft-deluxe-collection-pc">
+						<p>Buy now</p>
+						
 				</a>
-			</li>
-			<li>
-				<img src="images/logaster-2020-06-image14-3.png" alt="Minecraft logo" width="..." height="...">
-				<P>
+		</li>
 
-				</P>
-				<a>
-
-				</a>
-			</li>
-			<li>
-				<img src="images/logaster-2020-06-image14-3.png" alt="Minecraft logo" width="..." height="...">
-				<P>
-
-				</P>
-				<a>
-
-				</a>
-			</li>
-			<li>
-				<img src="images/logaster-2020-06-image14-3.png" alt="Minecraft logo" width="..." height="...">
-				<P>
-
-				</P>
-				<a>
-
-				</a>
-			</li>
-			<li>
-				<img src="images/logaster-2020-06-image14-3.png" alt="Minecraft logo" width="..." height="...">
-				<P>
-
-				</P>
-				<a>
-
-				</a>
-			</li>
-			<li>
-				<img src="images/logaster-2020-06-image14-3.png" alt="Minecraft logo" width="..." height="...">
-				<P>
-
-				</P>
-				<a>
-
-				</a>
-			</li>
-			<li>
-				<img src="images/logaster-2020-06-image14-3.png" alt="Minecraft logo" width="..." height="...">
-				<P>
-
-				</P>
-				<a>
-
-				</a>
-			</li>
-			<li>
-				<img src="images/logaster-2020-06-image14-3.png" alt="Minecraft logo" width="..." height="...">
-				<P>
-
-				</P>
-				<a>
-
-				</a>
-			</li>
+		<li class="MC_PurchaseMenu">
+			<img class="MC_PurchaseMenu_platforms_icon" src="images/icon_platform__nintendo.png" alt="Nintendo logo">
 			
+			<a class="MC_PurchaseMenu_platforms_link" href="https://www.nintendo.com/store/products/minecraft-106679?utm_source=mcnet_nintendo_pmp_mcov">
+					Nintendo
+			</a>
+	</li>
+
+	<li class="MC_PurchaseMenu">
+		<img class="MC_PurchaseMenu_platforms_icon" src="images/Platform-Icon_Chromebook.png" alt="Chromebook logo">
+		
+		<a class="MC_PurchaseMenu_platforms_link" href="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&amp;utm_source=mcnet_chromebook_pmp_mcov">
+				Chromebook
+		</a>
+	</li>
+
+	<li class="MC_PurchaseMenu">
+		<img class="MC_PurchaseMenu_platforms_icon" src="images/icon_platform__xbox.png" alt="Xbox logo">
+		
+		<a class="MC_PurchaseMenu_platforms_link" href="https://www.xbox.com/en-US/games/store/minecraft/9MVXMVT8ZKWC?cid=mcnet_xbox_pmp_mcov">
+				Xbox
+		</a>
+	</li>
+
+	<li class="MC_PurchaseMenu">
+		<img class="MC_PurchaseMenu_platforms_icon" src="images/Platform-Icon_Fire-TV@2x.png" alt="Amazon Fire logo">
+		
+		<a class="MC_PurchaseMenu_platforms_link MC_Glyph_Link_A" href="https://www.amazon.com/Mojang-Minecraft-Pocket-Edition/dp/B00992CF6W?utm_source=mcnet_amazonfire_pmp_mcov">
+				Amazon Fire
+		</a>
+	</li>
+
+	<li class="MC_PurchaseMenu">
+		<img class="MC_PurchaseMenu_platforms_icon" src="images/ios.svg" alt="IOS logo">
+		
+		<a class="MC_PurchaseMenu_platforms_link MC_Glyph_Link_A" href="https://apps.apple.com/app/apple-store/id479516143?pt=515380&ct=mcnet_nonJP_ios_pmp_mcov&mt=8">
+				IOS
+		</a>
+	</li>
+
+	<li class="MC_PurchaseMenu">
+		<img class="MC_PurchaseMenu_platforms_icon" src="images/playstation.svg" alt="Playstation logo">
+		
+		<a class="MC_PurchaseMenu_platforms_link MC_Glyph_Link_A" href="https://store.playstation.com/nl-nl/product/UP4433-PPSA17221_00-MINECRAFTPS50000/?utm_source=mcnet_playstation_pmp_mcov">
+				Playstation
+		</a>
+	</li>
+
+	<li class="MC_PurchaseMenu">
+		<img class="MC_PurchaseMenu_platforms_icon" src="images/android.svg" alt="Android logo">
+		
+		<a class="MC_PurchaseMenu_platforms_link MC_Glyph_Link_A" href="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&utm_source=mcnet_android_pmp_mcov">
+				Android
+		</a>
+	</li>
 		</ul>
 	</section>
 
-	<section> <!-- section 3-->
+<section> <!-- section 3 	"discover Minecraft" carousel-->
 		<h2>Discover the world of Minecraft</h2>
-			<p>
+		<p>
+			Build anything you can imagine, uncover eerie mysteries, and survive the night in the ultimate sandbox adventure game. In Minecraft, every playthrough is different, and unforgettable adventures await behind every corner. Explore and craft your way through an infinite world that's yours to shape, one block at a time.
+		</p>
+			<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything" width= "..." height="...">
+		<p>
+			Build sprawling settlements or a humble dirt hut. This world is yours to shape!
+		</p>
 
-			</p>
-			<img src="images/logaster-2020-06-image14-3.png" alt="Minecraft logo" width="..." height="...">
-			<p>
-
-			</p>
-
-			<div> <!-- slideshow -->
-				<div class="slideshowImg1">
-					<img src="img1.jpg" style="width:100%">
-				</div>
+		<ul class="carousel_discover_the_world">
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
+	
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
+	
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
+	
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
+	
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
+	
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
+	
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
+	
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
+	
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
+	
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
+	
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
+	
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
 			
-				<div class="slideshowImg2">
-					<img src="img2.jpg" style="width:100%">
-				</div>
-			
-				<div class="slideshowImg3">
-					<img src="img3.jpg" style="width:100%">
-				</div>
-			
-				<button>
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
 
-				</button>
+			<li>
+				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			</li>
+				
+		</ul>
 
-				<button>
-					
-				</button>
+</section>
+
+<section> <!-- section 4 	"How Minecraft works"-->
+	<h2 class="MC_Heading_2">
+		How Minecraft works
+	</h2>
+		<div class="sec3_text_en_image_container">
+			<img class="sec3_card_poster" src="images/MC-About_Key-Art_Gather_Resources_600x800.png" alt="Minecraft's Steve swings a pickaxe">
+				<h3 class="MC_Heading_3">
+					Gather Resources
+				</h3>
+				<p>
+					The typical journey starts with punching a tree to gather wood. The rest of your Minecraft adventure is up to you, whether you mine for precious ores or seek out rare materials. Just make sure to stock up on food!
+				</p>
+		</div>
+		<div class="sec3_text_en_image_container">
+			<img class="sec3_card_poster" src="images/MC-About_Key-Art_Survive_the_Night_600x800.png" alt="Minecraft's Alex swings their sword at a creeper">
+			<h3 class="MC_Heading_3">
+					Survive the Night
+			</h3>
+				<p>
+					When the sun goes down, hostile mobs abound. Will you face them or sleep through the night? And remember: it's always dark underground...
+				</p>
+		</div>
+
+		<div class="MC_cardA__card_front">
+			<img class="sec3_card_poster" src="images/MC-About_Key-Art_Build_Amazing_Things_600x800.png" alt="Minecraft's Alex and Steve building together with stone and wooden scaffolds">
+			<h3 class="MC_Heading_3">
+					Build Amazing Things
+			</h3>
+				<p>
+					Minecraft is the ultimate building game. Craft tools, build a humble shelter, or engineer your base with redstone. Can you build a base in the Nether? Only one way to find out.
+				</p>
+		</div>
+	</section>
+
+<section> <!-- section 5 	"different gamemodes" carousel--> 
+	<ul class="carousel_explore_gamemodes">
+		<li>
+			<img src="images/OV_PMP_GameModeCarousel_Art_Slide1_Desktop1.png" alt="Explore Gamemodes">
+			<div class="carousel2_head_en_text">     
+				<h2>
+					Explore Gamemodes 
+				</h2>
+				<p>
+					Shape your Minecraft experience with creative mode or survival mode to create without restraints or literally fight to survive.
+				</p>
 			</div>
+		</li>
+	
+			<li>
+				<img src="images/OV_PMP_GameModeCarousel_Art_Slide2_Desktop1.png" alt="Survival Mode">
+				<div class="carousel2_head_en_text">     
+					<h2>
+						Survival mode
+					</h2>
+					<p>
+						For the daring adventurers, nothing beats battling dangerous mobs, exploring dizzying landscapes, and crafting your way to victory in Survival mode.
+					</p>
+				</div>
+			</li>
+	
+			<li>
+				<img src="images/OV_PMP_GameModeCarousel_Art_Slide3_Desktop1.png" alt="Creative Mode">
+				<div class="carousel2_head_en_text">     
+					<h2>
+						Creative mode
+					</h2>
+					<p>
+						Set your imagination free with limitless resources, immunity to damage, and the ability to fly! In Creative mode, nothing stands in the way of the perfect build.
+					</p>
+				</div>
+			</li>
+		</ul>
 	</section>
 
-	<section> <!-- section 4-->
+<section> <!-- section 6 	 "Play with friends"-->
+		<h2 class="MC-heading_2">
+			Play with Friends
+		</h2>
+		<p>Survive and build with friends in this cross-platform game. Join lively communities or create your own private server with Realms!</p>
+		<img src="images/Play_With_Friends_Online_672x360.png" alt="Play with friends online">
+
+	<div class="Card1_content">
+		<h3 class="Card1_h3">
+			Online
+		</h3>
+			<p>Connect and play with players across the world, wherever they are.</p>
+		</div>
+		<ul class="play_together_list">
+				<li>1M+ Players</li>
+				<li>Bedrock</li>
+		</ul>
+
+	<button class="dropdown_toggle" type="button">
+	<h4 class="dropdown_toggle_text">
+			Worlds
+	</h4>
+	</button>
+	<div class="dropdown_content">
+	<p>Play in a custom world together with other players.</p>
+	</div>
+
+	<button class="dropdown_toggle" type="button">
+	<h4 class="dropdown_content">
+			Servers
+	</h4>
+	</button>
+	<div class="dropdown_content">
+	<p>Discover community-run servers, full of activities and home to thousands of players.</p>
+	</div>
+</section>
+
+<section> <!-- section 7 	"Play online"-->
+		<img src="images/Play_With_Friends_Realms_672x360.png" alt="Play with friends realms">
+	<div class="Card1_content">
+		<h3 class="Card1_h3">
+			Realms
+		</h3>
+		<p>Play locally or online on your own server; a persistent online world, safely stored in the cloud.</p>
+		</div>
+		<ul class="play_together_list">
+				<li>up to 11 players</li>
+				<li>Bedrock</li>
+		</ul>
+
+	<button class="dropdown_toggle" type="button">
+	<h4 class="dropdown_toggle_text">
+			realms plus
+	</h4>
+	</button>
+	<div class="dropdown_content">
+	<p>Get instant access to a catalog of 150+ Marketplace Pass content items, with new fun stuff added every month.</p>
+	</div>
+
+	<button class="dropdown_toggle" type="button">
+	<h4 class="dropdown_content">
+			java plus
+	</h4>
+	</button>
+	<div class="dropdown_content">
+	<p>Create and manage your own personal server together with up to 10 friends.</p>
+	</div>
+	</section>
+
+<section> <!-- section 8 	"Play Local"-->
+		<img src="images/Play_With_Friends_Local_672x360.png" alt="Play with friends local">
+		<div class="Card1_content">
+			<h3 class="Card1_h3">
+				Co-Op
+			</h3>
+			<p>Play couch co-op together with friends and family on your device.</p>
+			</div>
+			<ul class="play_together_list">
+					<li>4+ Players</li>
+					<li>Bedrock</li>
+			</ul>
+	
+		<button class="dropdown_toggle" type="button">
+		<h4 class="dropdown_toggle_text">
+			Worlds
+		</h4>
+		</button>
+		<div class="dropdown_content">
+		<p>Play in a custom world together with other players on a shared platform or through a LAN.</p>
+		</div>
+	
+		<button class="dropdown_toggle" type="button">
+		<h4 class="dropdown_content">
+				Servers
+		</h4>
+		</button>
+		<div class="dropdown_content">
+		<p>Play with friends and family on a local private server with separate devices.</p>
+		</div>
+	</section>
+
+<section> <!-- section 9 	"all three games"-->
+	<img src="images/PDP-Hero_Triple-Bundle_16x9.jpg" alt="All three games">
+	
+	<h2 class="MC_Heading_2   ">
+	Get all 3 Minecraft Games
+	</h2>	
+		<p>
+			Step into a blocky universe of creativity, thrills, and mystery with three Minecraft games in one bundle.&nbsp;The Triple Bundle includes Minecraft: Java &amp; Bedrock Edition, Minecraft Dungeons, and Minecraft Legends.
+		</p>
+
+		<button>
+			<a class="bundle_button">
+				<p>Get the Triple Bundle</p>
+			</a>
+		</button>
+	</section>
+
+<section> <!-- section 10	"Expand your world" carousel-->
+	<h2 class="MC_Heading_2">
+		Expand your world
+	</h2>
+	<p>
+		Minecraft is an open-world game, and it's always evolving through regular updates and Marketplace content. Check out the latest Minecraft updates and game drops:
+	</p>
+
+	<ul class="carousel_updates">
+		<li>
+			<img src="images/MCV_SummerDrop_Hero_DotNet_Blog_Editorial_1280x768.jpg" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                     
+				<h3>
+					Chase the Skies
+				</h3>
+					<p>
+						Experience the joy of soaring above the Overworld with our Chase the Skies drop! Fly with your happy ghast, build high into the clouds, leash a caravan of camels together, find wandering friends with the Player Locator Bar, and more.
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							See update
+					</a>
+			</div>
+		</li>
+
+		<li>
+			<img src="images/MCV_SpringDrop_DotNet_Blog_Editorial_1280x720.jpg" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                     
+				<h3>
+					Spring to Life
+				</h3>
+					<p>
+						Befriend new mob variants, marvel at glittering firefly bushes, seek out ambient sounds, and delight in an Overworld full of life.
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							See update
+					</a>
+			</div>
+		</li>
+
+		<li>
+			<img src="images/Minecraft_TheGardenAwakens_DotNet_1280x768.avif" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">
+				<h3>
+					The Garden Awakens
+				</h3>
+					<p>
+						Something stirs in the pale garden. Play the latest game drop and explore an unsettling biome, come face to face with a new mob, and more!
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							Learn more
+					</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/Vanilla-PMP_Collection-Carousel-0_Tricky-Trials_1280x768.jpg" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                     
+				<h3>
+					Tricky Trials
+				</h3>
+					<p>
+						Team up or go solo and discover new decorative blocks, hostile mobs, items, weapons, paintings, and the trial chambers, a sprawling structure stuffed with traps and treasures for every player!
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							Start Exploring
+					</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/Vanilla-PMP_Collection-Carousel-0_GA-Add-Ons_1280x768.webp" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                    
+				<h3>
+					Add-ons
+				</h3>
+					<p>
+						Customize your Minecraft worlds more than ever before! Add custom blocks, items, mobs, recipes, and more to craft a unique game experience.
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+						Start Exploring
+					</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/Vanilla-PMP_Collection-Carousel-0_Marketplace-Pass_1280x768.jpg" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                      
+				<h3>
+					Marketplace Pass
+				</h3>
+					<p>
+						Play 150+ pieces of exciting content with Marketplace Pass! Dive into worlds, mash-ups, skins packs, texture packs, and more.
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							Learn more
+					</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/Vanilla-PMP_Collection-Carousel-0_Realms_1280x768.jpg" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                     
+				<h3>
+					Minecraft Realms
+				</h3>
+					<p>
+						With Minecraft Realms, you'll get a subscription to your own personal Minecraft server, where you can easily and safely play online with friends in shared worlds across devices.
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							Learn more
+					</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/Vanilla-PMP_Collection-Carousel-0_Marketplace_1280x768.jpg" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                     
+				<h3>
+					Minecraft Marketplace
+				</h3>
+					<p>
+						Keep your gameplay endlessly inventive and fun with skin packs, texture packs, and more—some of which were built by our very own community members!
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							Explore the Marketplace
+					</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/Vanilla-PMP_Collection-Carousel-0_Trails-and-Tales_1280x768.webp" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                     
+				<h3>
+					Trails & Tales
+				</h3>
+					<p>
+						Ride a camel, hatch a sniffer, and trim your armor. Write and store your books in the chiseled bookshelf, because every story matters!
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							Learn more
+					</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/Vanilla-PMP_Collection-Carousel-0_The-Wild-Update_1280x768.webp" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                      
+				<h3>
+					The Wild Update
+				</h3>
+					<p>
+						Set your sights for adventure, wander aimlessly, or seek out something new in the Wild Update! The choices are endless, and all of them yours.
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							Learn More
+					</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/Vanilla-PMP_Collection-Carousel-0_Caves-and-Cliffs_1280x768.jpg" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                     
+				<h3>
+					Caves & Cliffs
+				</h3>
+					<p>
+						Explore bigger mountains, caves, and biomes along with an increased world height and updated terrain generation in the Caves & Cliffs Update.
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							Learn More
+					</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/Vanilla-PMP_Collection-Carousel-0_Nether-Update_1280x768.jpg" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                      
+				<h3>
+					Nether Update
+				</h3>
+					<p>
+						Welcome to the Nether. Stronger materials, scarier biomes, and snoutier mobs bring the heat to an already fiery dimension.
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							Learn More
+					</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/Vanilla-PMP_Collection-Carousel-0_Buzzy-Bees_1280x768.jpg" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                      
+				<h3>
+					Buzzy Bees
+				</h3>
+					<p>
+						Minecraft is buzzing! Discover how bees breathe life into their surroundings, bringing speedier crop growth, homey hives, and sticky honey!
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							Learn More
+					</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/Vanilla-PMP_Collection-Carousel-0_Village-and-Pillage_1280x768.jpg" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                     
+				<h3>
+					Village & Pillage
+				</h3>
+					<p>
+						Discover the most adventurous update yet! Defend against new threats, build with new blocks, and experience life in all-new villages.
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							Learn More
+					</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/Vanilla-PMP_Collection-Carousel-0_Update-Aquatic_1280x768.jpg" alt="Chase the Skies">
+			
+      <div class="carousel2_head_en_text">                   
+				<h3>
+					Update Aquatic
+				</h3>
+					<p>
+						Take a deep breath and dive into a vibrant new world beneath the surface! Full of marine life, new mobs and colorful sea-nery, Minecraft's oceans get their biggest update yet!
+					</p>
+					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
+							Learn More
+					</a>
+			</div>
+		</li>
+	</ul>
+	</section>
+
+<section> <!-- section 11 "Whats new" 	AAHHHHHHHHHHH  carousel -->
+	<h2 class="MC_Heading_2">
+		Whats new in Minecraft?
+	</h2>
+	<p>
+		Discover the latest Minecraft news, updates, and deep dives from the Minecraft universe!
+	</p>
+	<a href="https://www.minecraft.net/en-us/articles">
+		See all news
+</a>
+
+	<ul class="carousel_whats_new">
+		<li>
+			<img src="images/MCL_Fall25_KeyArt_FINAL_LOGO_277x277.webp" alt="Minecraft Live">
+			
+      <div class="carousel4_head_en_text">
+				<p>
+					News
+				</p>
+					<h3>
+					Minecraft LIVE! September 27th!
+					</h3>
+				<p>
+					New game drops! Developers! More! 
+				</p>
+			</div>
+		</li>
+
+		<li>
+			<img src="images/minecraft_superman_net_blog_277x277.jpg" alt="Superman DLC">
+			
+      <div class="carousel4_head_en_text">
+				<p>
+					Marketplace
+				</p>
+					<h3>
+					Superman DLC
+					</h3>
+				<p>
+					Time to save Metropolis
+				</p>
+			</div>
+		</li>
+
+		<li>
+			<img src="images/25w37a_277x277.jpg" alt="Minecraft 25w37a Snapshot">
+			
+      <div class="carousel4_head_en_text">
+				<p>
+					News
+				</p>
+					<h3>
+					Minecraft Snapshotc 25w37a
+					</h3>
+				<p>
+					a Minecraft Java Snapshot
+				</p>
+			</div>
+		</li>
+
+		<li>
+			<img src="images/OppoSuits_TILE.jpg" alt="Minecraft x OppoSuits collab">
+			
+      <div class="carousel4_head_en_text">
+				<p>
+					News
+				</p>
+					<h3>
+					OppoSuits x Minecraft
+					</h3>
+				<p>
+					A collection built For Every Crafter
+				</p>
+			</div>
+		</li>
 		
+		<li>
+			<img src="images/fern-1x1.jpg" alt="Fern">
+			
+      <div class="carousel4_head_en_text">
+				<p>
+					Deep Dives
+				</p>
+					<h3>
+					Taking Inventory: Fern
+					</h3>
+				<p>
+					An unnoticed Overworld delight
+				</p>
+			</div>
+		</li>
+
+		<li>
+			<img src="images/Marketplace_DotNet_277x277_MPPSEP.jpg" alt="Marketplace September content">
+			
+      <div class="carousel4_head_en_text">
+				<p>
+					Marketplace
+				</p>
+					<h3>
+					Marketplace Content: September 2025
+					</h3>
+				<p>
+					Time to slay boredom with this month's Marketplace Pass and Realms Plus
+				</p>
+			</div>
+		</li>
+
+		<li>
+			<img src="images/MC_CommunityChallengeCopper_NetBlogEditorial_277x277.jpg" alt="copper mining challenge completed">
+			
+      <div class="carousel4_head_en_text">
+				<p>
+					News
+				</p>
+					<h3>
+					Copper Mining challenge completed
+					</h3>
+				<p>
+					How to claim your Copper Collector reward
+				</p>
+			</div>
+		</li>
+
+		<li>
+			<img src="images/25w36a_277x277.jpg" alt="Minecraft 25w36a Snapshot">
+			
+      <div class="carousel4_head_en_text">
+				<p>
+					News
+				</p>
+					<h3>
+					Minecraft Snapshotc 25w36b
+					</h3>
+				<p>
+					a Minecraft Java Snapshot
+				</p>
+			</div>
+		</li>
+
+		<li>
+			<img src="images/MCV_CopperChallenge_editorial_277x277.jpg" alt="copper minin challenge">
+			
+      <div class="carousel4_head_en_text">
+				<p>
+					News
+				</p>
+					<h3>
+					Join a COpper mining challenge
+					</h3>
+				<p>
+					Gear up for The Copper Age with Rewards
+				</p>
+			</div>
+		</li>
+
+		<li>
+			<img src="images/noj0825-277x277.jpg" alt="copper minin challenge">
+			
+      <div class="carousel4_head_en_text">
+				<p>
+					News
+				</p>
+					<h3>
+					New on Java Realms: The Map is Right
+					</h3>
+				<p>
+					Which of these 13 maps wants to be a millionaire?
+				</p>
+			</div>
+		</li>
+	</ul>
 	</section>
 
-	<section> <!-- section 5-->
+<section> <!-- section 12	"FAQ"-->
+	<h2>
+		Frequently Asked Questions
+	</h2>
+
+	<ul>
+		<div class="FAQ_menu">
+			<button class="FAQ_menu_toggle" type="button">
+				<p>Is Minecraft a multiplayer game?</p>
+			</button>
+				<p>
+					You can play Minecraft online or as a multiplayer game. Learn how to play Bedrock in a <a href="https://help.minecraft.net/hc/en-us/articles/4410316619533-Play-Minecraft-Bedrock-Edition-Online-in-a-Multiplayer-Server"><b>join a multiplayer server in Java</b></a>.
+				</p>
+		</div>
+
+		<div class="FAQ_menu">
+			<button class="FAQ_menu_toggle" type="button">
+				<p>Does Minecraft get Updated?</p>
+			</button>
+				<p>
+					Yes, Minecraft game drops typically happen several times per year. Stay tuned for the next Minecraft update by checking out our <a href="https://help.minecraft.net/hc/en-us/articles/4410316619533-Play-Minecraft-Bedrock-Edition-Online-in-a-Multiplayer-Server"><b>blog.</b></a>.
+				</p>
+		</div>
 		
-	</section>
-
-	<section> <!-- section 6-->
+		<div class="FAQ_menu">
+			<button class="FAQ_menu_toggle" type="button">
+				<p>What type of game is Minecraft</p>
+			</button>
+				<p>
+					Minecraft is an open world sandbox game. If you enjoy action-adventure games that also involve creativity and building, you'll love Minecraft.
+				</p>
+		</div>
 		
-	</section>
-
-	<section> <!-- section 7-->
+		<div class="FAQ_menu">
+			<button class="FAQ_menu_toggle" type="button">
+				<p>What age is Minecraft for?</p>
+			</button>
+				<p>
+					Minecraft has an ESRB rating of Everyone 10+. As a sandbox action-adventure game, it's the perfect game for players of all ages!
+				</p>
+		</div>
 		
-	</section>
-
-	<section> <!-- section 8-->
+		<div class="FAQ_menu">
+			<button class="FAQ_menu_toggle" type="button">
+				<p>Can you Beat Minecraft?</p>
+			</button>
+				<p>
+					Minecraft is a sandbox game, so there isn't an official "end" to the game. However, many players say they "beat the game" once they kill the Ender Dragon.
+				</p>
+		</div>
 		
-	</section>
-
-	<section> <!-- section 9-->
+		<div class="FAQ_menu">
+			<button class="FAQ_menu_toggle" type="button">
+				<p>When did Minecraft release?</p>
+			</button>
+				<p>
+					The first version of Minecraft was released in 2009 for PC players, with the full version releasing in 2011. Since its release, it's been enjoyed by millions of players across the world. Get Minecraft today to experience this captivating virtual world.
+				</p>
+		</div>
 		
+	</ul>
 	</section>
 
-	<section> <!-- section 10-->
-		
-	</section>
+<footer>
+	<h2 class="MC_heading_2">
+		Follow Minecraft
+	</h2>
+	<ul>
+		<li> <!-- Youtube -->
+			<a href="https://www.youtube.com/minecraft" >
+					<svg xmlns="http://www.w3.org/2000/svg">
+					</svg>
+			</a>
+	</li>
+	<li><!-- instagram -->
+		<a href="https://www.instagram.com/minecraft/" >
+				<svg xmlns="http://www.w3.org/2000/svg">
+				</svg>
+		</a>
+</li>
+<li><!-- facebook -->
+	<a href="https://www.facebook.com/minecraft/" >
+			<svg xmlns="http://www.w3.org/2000/svg">
+			</svg>
+	</a>
+</li>
+<li><!-- twitter -->
+	<a href="https://www.x.com/minecraft/" >
+			<svg xmlns="http://www.w3.org/2000/svg">
+			</svg>
+	</a>
+</li>
+<li><!-- tiktok -->
+	<a href="https://www.tiktok.com/@minecraft" >
+			<svg xmlns="http://www.w3.org/2000/svg">
+			</svg>
+	</a>
+</li>
+<li><!-- whatsapp -->
+	<a href="https://www.whatsapp.com/channel/0029VakYS0uKLaHg2yxV2T1p" >
+			<svg xmlns="http://www.w3.org/2000/svg">
+			</svg>
+	</a>
+</li>
+<li><!-- discord -->
+	<a href="https://discord.com/invite/minecraft" >
+			<svg xmlns="http://www.w3.org/2000/svg">
+			</svg>
+	</a>
+</li>
+<li><!-- spotify -->
+	<a href="https://open.spotify.com/artist/7i68fmsIERvgavI8Q1H09h?trackId=6rjuKpPydT2SxN15TZpV7r" >
+			<svg xmlns="http://www.w3.org/2000/svg">
+			</svg>
+	</a>
+</li>
+	</ul>
 
+	</footer>
 
 	<script defer src="scripts/script.js"></script>
 </body>

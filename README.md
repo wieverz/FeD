@@ -39,12 +39,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   https://www.minecraft.net/en-us/about-minecraft
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Minecraft, over minecraft  
+  <img src="readme-images/FireShot Capture 003 - What is Minecraft_ Discover the World of Minecraft - Minecraft_ - [www.minecraft.net].png" width="375px" alt="Minecraft over minecraft pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/Screenshot 2025-09-08 at 08.29.54.png" width="375px" alt="Minecraft Marketplace pagina">
  
 </details>
 
@@ -57,6 +57,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  De Minecraft website is doormiddel van een screenreader, in mijn test de standaard screenreader van MacOS. best goed navigeerbaar, er is op vrijwel alle punten duidelijk aangegeven wat er gefocusd is, en alle images hebben een passende alt text. waar ik wel tegenaan liep is dat bij verschillende carousels ik niet zonder te kijken kon navigeren, omdat het niet duidelijk was hoe ik verder moest gaan. Verder op de website kon ik alles met "tab" selecteren, maar dit werkte hier niet en zo kwam ik vast te zitten.
 
 </details>
 
@@ -68,7 +69,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/FireShot Capture 002 - What is Minecraft_ Discover the World of Minecraft - Minecraft_ - [www.minecraft.net]-01.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/FireShot Capture 002 - What is Minecraft_ Discover the World of Minecraft - Minecraft_ - [www.minecraft.net]-02.png" width="375px" alt="deel 2 van de breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
@@ -229,7 +231,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
+  1. https://www.minecraft.net/en-us/about-minecraft - Minecraft website, deze ga ik namaken.
   2. bron 2
   3. ...
 

@@ -14,18 +14,999 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
+	--header-h: 80px;
 	--color-text:#111;
 	--color-background:#eee;
+	--mc-text-highlight-color: #c736ff;
+	--mc-core-white: #fff;
+	--mc-core-green: #3c8527;
+	--mc-core-green-2: #81cd60;
+	--mc-market-grey:#171615;
+	--mc-market-grey-2: #262423;
+	--mc-search_icon: url(images/search_icon.jpg);
+	--mc-arrow: url(images/arrow_icon.jpg);
+	--mc-category-gradient-base:linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,.35)),#171615;
+	--mc-category-gradient: linear-gradient(180deg,rgba(255,196,43,0) 50%,rgba(255,196,43,.25) 90.5%),linear-gradient(180deg,#171615,#000 100.05%);
+	--mc-hover-shadow: inset 4px -4px 2px 0 #f9dc66,inset 0 4px 0 0 #f9dc66,inset -4px -4px 0 0 #fbbc26,inset 0 0 24px 0 rgba(255,208,43,.35),0 0 32px 0 rgba(255,196,43,.4);
+	--mc-base-shadow: inset -4px 4px 0 0 rgba(0,0,0,.3),inset 4px -4px 0 0 #3d3938;
+
+
+	--mc-arrow-groot: polygon(50% 5%, 40% 5%, 40% 15%, 30% 15%, 30% 25%, 20% 25%, 20% 35%, 10% 35%, 10% 45%, 0% 45%, 0%
+	0%
+	 55%, 10% 55%, 10% 65%, 20% 65%, 20% 75%, 30% 75%, 30% 85%, 40% 85%, 40% 95%, 50% 95%, 50% 85%, 40% 85%, 40% 75%, 30% 75%, 30% 65%, 20% 65%, 20% 55%, 100% 55%, 100% 45%, 20% 45%, 20% 35%, 30% 35%, 30% 25%, 40% 25%, 40% 15%, 50% 15%, 50% 5%);
+	/* --mc-add-on-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H0V8H2H4H6V10V16H8H10H12V10V8V6H14H16V4V2H14V0H10H6H4H2ZM14 2V4H12V6H10V8V10H8V8V6H6V2H10H14ZM4 6H2V2H4V6Z" fill="%23EDE5E2"/></svg>'); */
+
+	--mc-text-grey: #d0c5c0;
+}
+
+
+/****************/
+/* mijn STYLING */
+/****************/
+
+
+/**************************************************************************/
+/**************************************************************************/
+/****************************** ALGEMEEN **********************************/
+/**************************************************************************/
+/**************************************************************************/
+	
+	@layer basis {
+		*, *::after, *::before {
+			box-sizing:border-box;  
+		}
+	
+		body{
+			margin:0;
+		}
+
+		main {
+			width:calc(100dvw - 2 * var(--tmplt-size-whitespace) );
+		}
+	
+		ul {
+			margin:0;
+			padding:0;
+			list-style-type:"";
+		}
+	
+		li {
+			display:grid;
+		}
+	
+		img {
+			grid-area:1/1;
+		}
+	
+		h2 {
+			grid-area:1/1;
+			place-self:end start;
+			z-index:1;
+	
+			margin:calc(var(--tmplt-size-whitespace) * .5);
+			padding:.25em;
+			line-height:1;
+			color:#000;
+		}
+	
+		img {
+			width:100%;
+			display:block;
+		}
+	}
+	
+
+/**************************************************************************/
+/**************************************************************************/
+/******************************* HEADER ***********************************/
+/**************************************************************************/
+/**************************************************************************/
+
+/* old
+header {
+	
+	background-color: #262523;
+	width:100%;
+	height: 80px;
+	opacity: 0.97;
+	position: sticky;
+	top: 0;
+
+	
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	background-color: rgba(38, 36, 35, .9);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+	
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0.5em;
+  background-color: #1c1c1c;
+}
+.buy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 2px solid #4CAF50;
+  color: #4CAF50;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu-btn {
+  background-color: #2e6e3a;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.MC_nav_logo {
+	width: 15em;
+	margin:0;
+}
+
+header a {
+	margin-left: 5em;
+	background-color: transparent;
+	border: 2px solid var(--mc-core-green);
+	color: var(--mc-core-green-2);
+	font-weight: 800;
+	letter-spacing: .03em;
+	text-transform: uppercase;
+}
+
+header a:visited {
+	margin-left: 5em;
+	background-color: transparent;
+	border: 2px solid var(--mc-core-green);
+	color: var(--mc-core-green-2);
+	font-weight: 800;
+	letter-spacing: .03em;
+	text-transform: uppercase;
+}
+*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-h);
+  z-index: 9999;
+
+  /* blur en schaduw  */
+  background: rgba(38, 36, 35, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 1em;
+}
+
+/* logo */
+.MC_nav_logo {
+  height: 75px;
+  width: auto;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+/* buy knop */
+.buy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 2px solid var(--mc-core-green);
+  color: var(--mc-core-green-2);
+  padding: 0.25rem 0.75rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  background-color: transparent;
+}
+
+.buy-btn::after{
+	background: var(--mc-arrow);
+}
+
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 35px;
+  height: 30px;
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hidden_nav {
+  display: none;           /* standaard verborgen */
+  background-color: #1c1c1c;
+  padding: 1rem;
+}
+
+.hidden_nav.show {
+  display: block;          /* zichtbaar bij toggle */
+}
+
+
+/* begin voor responsive
+
+
+/**************************************************************************/
+/**************************************************************************/
+/****************************** HOOFDPAGINA *******************************/
+/**************************************************************************/
+/**************************************************************************/
+/* section 0: */
+
+.landpagina{
+	position: relative;
+}
+
+.MC_Heading_1 {
+	text-align: center;
+	border: none;
+	max-width: 5em;
+	color: var(--mc-core-white);
+	font-family: var(--mc-vanilla-fontlist);
+	text-shadow: var(--mc-vanilla-coldgrey-3) 0 4px;
+}
+
+.scroll_button {
+    background: #7345e5;
+    box-shadow: inset 0 -6px 0 #4a1cac, inset 0 6px 0 #a163f2;
+    color: var(--mc-core-white);
+    font-weight: 800;
+    letter-spacing: .03em;
+}
+
+.scroll_button span {
+	color: var(--mc-core-white);
+	font-weight: 800;
+	letter-spacing: .03em;
+}
+
+.MC_Animation_toggle{
+	visibility: hidden;
+}
+
+#background_video {
+	z-index: -1;
+  position: absolute;
+  right: 0;
+	width: 100%;
+  min-height: 100%;
+}
+
+
+/* 1. Carousel */
+
+.carousel_discover_the_world {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x:contain;
+	gap: 1em;
+	}
+	
+	li {
+	flex-basis: 70%;
+	flex-shrink: 0;
+	scroll-snap-align: center;
+
+	}
+	.carousel_discover_the_world::scroll-button(*) {
+		/* styling voor de buttons */
+		width:3em;
+		height:3em;
+		margin:1em 0 0;
+		padding:0;
+		
+		background-color:canvas;
+		border:none;
+		border-radius:50%;
+		cursor:pointer;
+	
+		font-size:1em;
+		position:absolute;
+	}
+	
+	.carousel_discover_the_world::scroll-button(right) {
+		
+		content: '→' / 'Next';
+		right:clamp(1.5rem, 5vw, 2rem);
+		
+	}
+	
+	.carousel_discover_the_world::scroll-button(left) { 
+		content: '←' / 'previous';
+		left: clamp(1.5rem, 5vw, 2rem);
+	}
+		
+	.carousel_discover_the_world::scroll-button(*):disabled {
+		opacity:50%;
+	}
+	
+	@media (width > 30em) {
+		.carousel_discover_the_world {
+	display: flex;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x:contain;
+	gap: 1em;
+		}
+	}
+
+
+	.carousel_discover_the_world {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x:contain;
+	gap: 1em;
+	}
+	
+	li {
+	flex-basis: 70%;
+	flex-shrink: 0;
+	scroll-snap-align: center;
+
+	}
+	.carousel_discover_the_world::scroll-button(*) {
+		/* styling voor de buttons */
+		width:3em;
+		height:3em;
+		margin:1em 0 0;
+		padding:0;
+		
+		background-color:canvas;
+		border:none;
+		border-radius:50%;
+		cursor:pointer;
+	
+		font-size:1em;
+		position:absolute;
+	}
+	
+	.carousel_discover_the_world::scroll-button(right) {
+		
+		content: '→' / 'Next';
+		right:clamp(1.5rem, 5vw, 2rem);
+		
+	}
+	
+	.carousel_discover_the_world::scroll-button(left) { 
+		content: '←' / 'previous';
+		left: clamp(1.5rem, 5vw, 2rem);
+	}
+		
+	.carousel_discover_the_world::scroll-button(*):disabled {
+		opacity:50%;
+	}
+	
+	@media (width > 30em) {
+		.carousel_discover_the_world {
+	display: flex;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x:contain;
+	gap: 1em;
+		}
+	}
+
+
+/* 2. Carousel */
+
+.carousel_explore_gamemodes {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x:contain;
+	gap: 1em;
+	}
+	
+	li {
+	flex-basis: 70%;
+	flex-shrink: 0;
+	scroll-snap-align: center;
+
+	}
+	.carousel_explore_gamemodes::scroll-button(*) {
+		/* styling voor de buttons */
+		width:3em;
+		height:3em;
+		margin:1em 0 0;
+		padding:0;
+		
+		background-color:canvas;
+		border:none;
+		border-radius:50%;
+		cursor:pointer;
+	
+		font-size:1em;
+		position:absolute;
+	}
+	
+	.carousel_explore_gamemodes::scroll-button(right) {
+		
+		content: '→' / 'Next';
+		right:clamp(1.5rem, 5vw, 2rem);
+		
+	}
+	
+	.carousel_explore_gamemodes::scroll-button(left) { 
+		content: '←' / 'previous';
+		left: clamp(1.5rem, 5vw, 2rem);
+	}
+		
+	.carousel_explore_gamemodes::scroll-button(*):disabled {
+		opacity:50%;
+	}
+	
+	@media (width > 30em) {
+		.carousel_explore_gamemodes {
+	display: flex;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x:contain;
+	gap: 1em;
+		}
+	}
+
+	/* 3. Carousel */
+
+.carousel_updates {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x:contain;
+	gap: 1em;
+	}
+	
+	li {
+	flex-basis: 70%;
+	flex-shrink: 0;
+	scroll-snap-align: center;
+
+	}
+	.carousel_updates::scroll-button(*) {
+		/* styling voor de buttons */
+		width:3em;
+		height:3em;
+		margin:1em 0 0;
+		padding:0;
+		
+		background-color:canvas;
+		border:none;
+		border-radius:50%;
+		cursor:pointer;
+	
+		font-size:1em;
+		position:absolute;
+	}
+	
+	.carousel_updates::scroll-button(right) {
+		
+		content: '→' / 'Next';
+		right:clamp(1.5rem, 5vw, 2rem);
+		
+	}
+	
+	.carousel_updates::scroll-button(left) { 
+		content: '←' / 'previous';
+		left: clamp(1.5rem, 5vw, 2rem);
+	}
+		
+	.carousel_updates::scroll-button(*):disabled {
+		opacity:50%;
+	}
+	
+	@media (width > 30em) {
+		.carousel_updates {
+	display: flex;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x:contain;
+	gap: 1em;
+		}
+	}
+
+/* 4. Carousel */
+
+.carousel_whats_new {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x:contain;
+	gap: 1em;
+	}
+	
+	li {
+	flex-basis: 70%;
+	flex-shrink: 0;
+	scroll-snap-align: center;
+
+	}
+	.carousel_whats_new::scroll-button(*) {
+		/* styling voor de buttons */
+		width:3em;
+		height:3em;
+		margin:1em 0 0;
+		padding:0;
+		
+		background-color:canvas;
+		border:none;
+		border-radius:50%;
+		cursor:pointer;
+	
+		font-size:1em;
+		position:absolute;
+	}
+	
+	.carousel_whats_new::scroll-button(right) {
+		
+		content: '→' / 'Next';
+		right:clamp(1.5rem, 5vw, 2rem);
+		
+	}
+	
+	.carousel_whats_new::scroll-button(left) { 
+		content: '←' / 'previous';
+		left: clamp(1.5rem, 5vw, 2rem);
+	}
+		
+	.carousel_whats_new::scroll-button(*):disabled {
+		opacity:50%;
+	}
+	
+	@media (width > 30em) {
+		.carousel_whats_new {
+	display: flex;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x:contain;
+	gap: 1em;
+		}
+	}
+
+
+
+/**************************************************************************/
+/**************************************************************************/
+/****************************** MARKTPAGINA *******************************/
+/**************************************************************************/
+/**************************************************************************/
+
+.MC_category_lijst {
+	background-color: var(--mc-market-grey);
+
+}
+
+.marketplace{
+	background-color: var(--mc-market-grey);
+}
+
+
+.mrkt_logo{
+	max-width: 720px;
+  width: 100%;
+	align-self: center;
+	padding: 24px 20px;
+}
+.market_landpagina{
+	background: linear-gradient(0deg, #594922 6%, #644a21 30%, #433522 53%, #222120);
+	background-color: #a18037;
+	Border: none;
+	margin-top: 5em;
+}
+
+.market_landpagina p{
+	color: var(--mc-core-white);
+	margin:0;
+	padding:20px;
+	display: block;
+	text-align: center;
+}
+
+/*  link kleur = #763077 */
+.MC_live_announcement {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-image: url(/images/Sub-Nav-Banner_MCL-Fall-25_3440x64.png);
+  background-size: cover;    
+  background-position: center;  
+}
+
+.MC_live_announcement p {
+  font-size: 1em;
+  font-weight: 500;
+  color: black;
+}
+.MC_live_announcement a{
+	color:#763077;
+}
+
+
+/************* SEARCHBALK *************/
+
+.search_section {
+	background: linear-gradient(180deg, #a18037 6.88%, #644a21 30.16%, #433522 53.06%, #222120);
+	background-color: #a18037;
+	border-top: 24px solid #f9e17a;
+	box-shadow: 0 -3px 0 0 #fac02c;
+	padding: 16px 16px 16px 16px ;
+	margin: 0;
+	align-items: center;
+	background-color: #0e0d0d;
+
+}
+
+.MC_Search{
+	gap: 16px;
+	height: 68px;
+	margin-bottom: 1em;
+}
+
+.MC_Search_label {
+  display: block;
+	margin: 0 0 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--mc-core-white);
+  font-family: sans-serif;
+}
+
+/* poging to vergrootglas
+ */
+
+/* Input  */
+
+.MC_Search_container {
+	display: flex
+;
+	flex: 1;
+	background: none;
+	border: none;
+	color: white;
+	font-size: 1rem;
+	font-family: sans-serif;
+	outline: none;
+	gap: 1em;
+	align-items: center;
+	background-color: var(--mc-market-grey);
+	border: 1px solid grey;
+	padding: 16px;
+	margin: 0;
+	width: 100%;
+}
+
+.MC_Search_container img{
+	height: 24px;
+	min-width: 24px;
+	width: 24px;
+	filter: invert(1);	
+}
+
+.MC_Search_input {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-family: sans-serif;
+  outline: none;
+}
+
+.MC_Search_input:placeholder {
+  color: #aaa
+}
+
+/* search icon attempt
+.MC_Search_container:before {
+	background: var(--mc-search_icon);
+	content: "images/search_icon.jpg";
+	height: 24px;
+	margin-left: 24px;
+	min-width: 24px;
+	width: 24px;
+} */
+
+/* Clear button */
+.MC_clear_search {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.MC_clear_search:hover {
+  color: white;
+}
+
+/* Clear text zelf (verbergen maar bruikbaar voor screenreaders) */
+.MC_clear_search_text {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+	
 }
 
 
 
+/********************* CATEGORIEN ***********************/
+
+@media screen and (max-width: 576px) {
+	.category_section{
+			padding-left: 16px;
+			padding-right: 16px;
+	}
+}
+
+.MC_Heading_2 {
+	color: var(--mc-core-white);
+	margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.MC_category_lijst{
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap: 24px;
+justify-content: center;
+list-style-type: none;
+padding: 0;
+width: 100%;
+}
+
+.MC_category_lijst a{
+	color: var(--mc-core-white);
+	text-decoration: none;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1em;
+	height: 20px;
+}
+
+	.MC_category_lijst a:visited{
+		color: var(--mc-core-white);
+		text-decoration: none;
+		}
+
+.MC_category_item {
+	background: var(--mc-category-gradient-base);
+	box-shadow: var(--mc-base-shadow);
+	flex-direction: row;
+	gap: 12px;
+	min-width: 193px;
+	padding: 16px;
+	text-decoration: none;
+}
+
+.MC_category_item:hover {
+	background: var(--mc-category-gradient);
+	box-shadow: var(--mc-hover-shadow);
+}
+
+@media screen and (max-width: 576px) {
+	.MC_category_lijst>li {
+			flex-basis: 100%
+	}
+
+	.MC_category_item {
+			align-items: center;
+			flex-direction: row
+	}
+
+	.MC_category_item svg {
+			position: relative;
+			top: 1px
+	}
+}
 
 
-/****************/
-/* JOUW STYLING */
-/****************/
+/*****************************************************************************/
+/*************************** Carousels marketplace ***************************/
+/*****************************************************************************/
 
-/* jouw code */
+.carousel_controls{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 16px;
+}
 
+.carousel_controls h3{
+	color: var(--mc-core-white);
+	margin-top: 2em;
+  margin-bottom: 1em;
+	padding-right: 7em;
+}
+
+.carousel_controls svg{
+	fill: var(--mc-core-white);
+	width: 32px;
+}
+.carousel_controls svg:first-of-type{
+	transform: rotate(270deg);
+}
+.carousel_controls svg:last-of-type{
+	transform: rotate(90deg);
+	margin-right: 16px;
+}
+
+
+.carousel_market {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x:contain;
+	gap: 1em;
+	margin-left: 16px;
+	}
+
+
+.carousel_market li a{
+	width: 280px;
+	background-color: var(--mc-market-grey-2);
+	box-shadow: inset 0 -2px 0 0 #000, inset 0 2px 0 0 #3d3938;
+
+	color: var(--mc-core-white);
+
+	border: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-top: 2px;
+	padding: 16px;
+	position: relative;
+	text-decoration: none;
+}
+
+.carousel_info{
+	display: flex;
+	flex-direction: column;
+}
+.carousel_info_line{
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	gap: 6px;
+	align-items: center;
+}
+.carousel_info_line_2{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.MC_listprice {
+	display: flex;
+	justify-content: center;
+}
+
+.MC_type_content {
+	background: var(--mc-category-gradient-base);
+	flex-direction: row;
+	gap: 12px;
+	padding: 6px;
+	text-decoration: none;
+}
+
+.carousel_info_line p:nth-child(2) {
+	color:var(--mc-text-grey);
+}
+
+.carousel_market a{
+	text-decoration: none;
+	color: var(--mc-core-white);
+}
+
+.carousel_market img {
+	display: inline-flex;
+	margin-bottom: 16px;
+	width: 100%;
+	height: auto;
+}
+/* scroll buttons, niet nodig
+	.carousel_market::scroll-button(*) {
+		width:3em;
+		height:3em;
+		margin:1em 0 0;
+		padding:0;
+		
+		background-color:canvas;
+		border:none;
+		border-radius:50%;
+		cursor:pointer;
+	
+		font-size:1em;
+		position:absolute;
+	}
+	
+	.carousel_market::scroll-button(right) {
+		content: '→' / 'next';
+		right:clamp(1.5rem, 5vw, 2rem);
+		
+	}
+	
+	.carousel_market::scroll-button(left) { 
+		content: '←' / 'previous';
+		left: clamp(1.5rem, 5vw, 2rem);
+	}
+		
+	.carousel_market::scroll-button(*):disabled {
+		opacity:50%;
+	} */
+	
+	@media (width > 30em) {
+		.carousel_market {
+	display: flex;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x:contain;
+	gap: 1em;
+		}
+	}
+
+	.footer_socials{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		list-style-type: none;
+		margin-top: 23px;
+		padding: 0;
+	}
+
+	.MC_Footer li {
+		width: 40px;
+	}
+
+	.footer_icon {
+		width: 40px;
+	}
