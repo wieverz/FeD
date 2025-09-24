@@ -22,10 +22,22 @@
 	--mc-core-green: #3c8527;
 	--mc-core-green-2: #81cd60;
 	--mc-market-grey:#171615;
+	--mc-market-grey-2: #262423;
+	--mc-search_icon: url(images/search_icon.jpg);
+	--mc-arrow: url(images/arrow_icon.jpg);
+	--mc-category-gradient-base:linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,.35)),#171615;
+	--mc-category-gradient: linear-gradient(180deg,rgba(255,196,43,0) 50%,rgba(255,196,43,.25) 90.5%),linear-gradient(180deg,#171615,#000 100.05%);
+	--mc-hover-shadow: inset 4px -4px 2px 0 #f9dc66,inset 0 4px 0 0 #f9dc66,inset -4px -4px 0 0 #fbbc26,inset 0 0 24px 0 rgba(255,208,43,.35),0 0 32px 0 rgba(255,196,43,.4);
+	--mc-base-shadow: inset -4px 4px 0 0 rgba(0,0,0,.3),inset 4px -4px 0 0 #3d3938;
+
+
+	--mc-arrow-groot: polygon(50% 5%, 40% 5%, 40% 15%, 30% 15%, 30% 25%, 20% 25%, 20% 35%, 10% 35%, 10% 45%, 0% 45%, 0%
+	0%
+	 55%, 10% 55%, 10% 65%, 20% 65%, 20% 75%, 30% 75%, 30% 85%, 40% 85%, 40% 95%, 50% 95%, 50% 85%, 40% 85%, 40% 75%, 30% 75%, 30% 65%, 20% 65%, 20% 55%, 100% 55%, 100% 45%, 20% 45%, 20% 35%, 30% 35%, 30% 25%, 40% 25%, 40% 15%, 50% 15%, 50% 5%);
+	/* --mc-add-on-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H0V8H2H4H6V10V16H8H10H12V10V8V6H14H16V4V2H14V0H10H6H4H2ZM14 2V4H12V6H10V8V10H8V8V6H6V2H10H14ZM4 6H2V2H4V6Z" fill="%23EDE5E2"/></svg>'); */
+
+	--mc-text-grey: #d0c5c0;
 }
-
-
-
 
 
 /****************/
@@ -210,16 +222,36 @@ nav {
   background-color: transparent;
 }
 
-/* menu button */
-.menu-btn {
-  background-color: var(--mc-core-green);
-  border: none;
-  color: var(--mc-core-white);
-  font-size: 1.2rem;
-  padding: 0.5rem;
-  border-radius: 6px;
-	
+.buy-btn::after{
+	background: var(--mc-arrow);
 }
+
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 35px;
+  height: 30px;
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hidden_nav {
+  display: none;           /* standaard verborgen */
+  background-color: #1c1c1c;
+  padding: 1rem;
+}
+
+.hidden_nav.show {
+  display: block;          /* zichtbaar bij toggle */
+}
+
 
 /* begin voor responsive
 
@@ -633,23 +665,219 @@ nav {
 	color:#763077;
 }
 
-.MC_Search{
+
+/************* SEARCHBALK *************/
+
+.search_section {
 	background: linear-gradient(180deg, #a18037 6.88%, #644a21 30.16%, #433522 53.06%, #222120);
 	background-color: #a18037;
 	border-top: 24px solid #f9e17a;
 	box-shadow: 0 -3px 0 0 #fac02c;
-
+	padding: 16px 16px 16px 16px ;
+	margin: 0;
 	align-items: center;
 	background-color: #0e0d0d;
-	border: 1px solid var(--mc-core-grey-4);
-	display: flex
-;
-	gap: 16px;
-	height: 68px;
-	padding: 8px 0;
+
 }
 
-/* Carousels marketplace  */
+.MC_Search{
+	gap: 16px;
+	height: 68px;
+	margin-bottom: 1em;
+}
+
+.MC_Search_label {
+  display: block;
+	margin: 0 0 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--mc-core-white);
+  font-family: sans-serif;
+}
+
+/* poging to vergrootglas
+ */
+
+/* Input  */
+
+.MC_Search_container {
+	display: flex
+;
+	flex: 1;
+	background: none;
+	border: none;
+	color: white;
+	font-size: 1rem;
+	font-family: sans-serif;
+	outline: none;
+	gap: 1em;
+	align-items: center;
+	background-color: var(--mc-market-grey);
+	border: 1px solid grey;
+	padding: 16px;
+	margin: 0;
+	width: 100%;
+}
+
+.MC_Search_container img{
+	height: 24px;
+	min-width: 24px;
+	width: 24px;
+	filter: invert(1);	
+}
+
+.MC_Search_input {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-family: sans-serif;
+  outline: none;
+}
+
+.MC_Search_input:placeholder {
+  color: #aaa
+}
+
+/* search icon attempt
+.MC_Search_container:before {
+	background: var(--mc-search_icon);
+	content: "images/search_icon.jpg";
+	height: 24px;
+	margin-left: 24px;
+	min-width: 24px;
+	width: 24px;
+} */
+
+/* Clear button */
+.MC_clear_search {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.MC_clear_search:hover {
+  color: white;
+}
+
+/* Clear text zelf (verbergen maar bruikbaar voor screenreaders) */
+.MC_clear_search_text {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+	
+}
+
+
+
+/********************* CATEGORIEN ***********************/
+
+@media screen and (max-width: 576px) {
+	.category_section{
+			padding-left: 16px;
+			padding-right: 16px;
+	}
+}
+
+.MC_Heading_2 {
+	color: var(--mc-core-white);
+	margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.MC_category_lijst{
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap: 24px;
+justify-content: center;
+list-style-type: none;
+padding: 0;
+width: 100%;
+}
+
+.MC_category_lijst a{
+	color: var(--mc-core-white);
+	text-decoration: none;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1em;
+	height: 20px;
+}
+
+	.MC_category_lijst a:visited{
+		color: var(--mc-core-white);
+		text-decoration: none;
+		}
+
+.MC_category_item {
+	background: var(--mc-category-gradient-base);
+	box-shadow: var(--mc-base-shadow);
+	flex-direction: row;
+	gap: 12px;
+	min-width: 193px;
+	padding: 16px;
+	text-decoration: none;
+}
+
+.MC_category_item:hover {
+	background: var(--mc-category-gradient);
+	box-shadow: var(--mc-hover-shadow);
+}
+
+@media screen and (max-width: 576px) {
+	.MC_category_lijst>li {
+			flex-basis: 100%
+	}
+
+	.MC_category_item {
+			align-items: center;
+			flex-direction: row
+	}
+
+	.MC_category_item svg {
+			position: relative;
+			top: 1px
+	}
+}
+
+
+/*****************************************************************************/
+/*************************** Carousels marketplace ***************************/
+/*****************************************************************************/
+
+.carousel_controls{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 16px;
+}
+
+.carousel_controls h3{
+	color: var(--mc-core-white);
+	margin-top: 2em;
+  margin-bottom: 1em;
+	padding-right: 7em;
+}
+
+.carousel_controls svg{
+	fill: var(--mc-core-white);
+	width: 32px;
+}
+.carousel_controls svg:first-of-type{
+	transform: rotate(270deg);
+}
+.carousel_controls svg:last-of-type{
+	transform: rotate(90deg);
+	margin-right: 16px;
+}
+
 
 .carousel_market {
 	display: flex;
@@ -658,16 +886,74 @@ nav {
 	scroll-behavior: smooth;
 	overscroll-behavior-x:contain;
 	gap: 1em;
+	margin-left: 16px;
 	}
-	
-	li {
-	flex-basis: 50%;
-	flex-shrink: 0;
-	scroll-snap-align: center;
 
-	}
+
+.carousel_market li a{
+	width: 280px;
+	background-color: var(--mc-market-grey-2);
+	box-shadow: inset 0 -2px 0 0 #000, inset 0 2px 0 0 #3d3938;
+
+	color: var(--mc-core-white);
+
+	border: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-top: 2px;
+	padding: 16px;
+	position: relative;
+	text-decoration: none;
+}
+
+.carousel_info{
+	display: flex;
+	flex-direction: column;
+}
+.carousel_info_line{
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	gap: 6px;
+	align-items: center;
+}
+.carousel_info_line_2{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.MC_listprice {
+	display: flex;
+	justify-content: center;
+}
+
+.MC_type_content {
+	background: var(--mc-category-gradient-base);
+	flex-direction: row;
+	gap: 12px;
+	padding: 6px;
+	text-decoration: none;
+}
+
+.carousel_info_line p:nth-child(2) {
+	color:var(--mc-text-grey);
+}
+
+.carousel_market a{
+	text-decoration: none;
+	color: var(--mc-core-white);
+}
+
+.carousel_market img {
+	display: inline-flex;
+	margin-bottom: 16px;
+	width: 100%;
+	height: auto;
+}
+/* scroll buttons, niet nodig
 	.carousel_market::scroll-button(*) {
-		/* styling voor de buttons */
 		width:3em;
 		height:3em;
 		margin:1em 0 0;
@@ -683,8 +969,7 @@ nav {
 	}
 	
 	.carousel_market::scroll-button(right) {
-		
-		content: '→' / 'Next';
+		content: '→' / 'next';
 		right:clamp(1.5rem, 5vw, 2rem);
 		
 	}
@@ -696,7 +981,7 @@ nav {
 		
 	.carousel_market::scroll-button(*):disabled {
 		opacity:50%;
-	}
+	} */
 	
 	@media (width > 30em) {
 		.carousel_market {
@@ -709,3 +994,19 @@ nav {
 		}
 	}
 
+	.footer_socials{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		list-style-type: none;
+		margin-top: 23px;
+		padding: 0;
+	}
+
+	.MC_Footer li {
+		width: 40px;
+	}
+
+	.footer_icon {
+		width: 40px;
+	}
