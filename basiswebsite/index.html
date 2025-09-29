@@ -9,7 +9,8 @@
 	<title>What is Minecraft?</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link rel="icon" href="favicon/Homepage_Download-Launcher_Creeper-Logo_500x500 copy.png" type="image/pngtop t">
+
 </head>
 
 <body>
@@ -17,24 +18,73 @@
   <header>
     <nav>
       <div class="logo">
-        <img src="/images/logaster-2020-06-image14-3.png" alt="Minecraft logo" class="MC_nav_logo">
+        <img src="images/Global-Header_MCCB-Logo_300x51.svg" alt="Minecraft logo" class="MC_nav_logo">
       </div>
-  
-      <div class="nav-actions">
-        <a href="marketplace.html" class="buy-btn">BUY <span>➔</span></a>
+
+      <nav class="hidden_nav" id="mobileMenu">
+        <ul>
+          <li>
+            <button class="hidden_nav_link">
+              Games 
+              <p class="hidden_arrow">
+              ▼
+            </p>
+          </button>
+        </li>
+          <li>
+            <button class="hidden_nav_link">
+              Shop <p class="hidden_arrow">
+                ▼
+              </p>
+            </button>
+          </li>
+          <li>
+            <button class="hidden_nav_link">
+              News <p class="hidden_arrow">
+                ▼
+              </p>
+            </button>
+            </li>
+          <li>
+            <button class="hidden_nav_link">
+              Support <p class="hidden_arrow">
+                ▼
+              </p>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+       <div class="nav-actions">
+        <a href="marketplace.html" class="buy-btn">BUY <p>➔</p></a>
         <button class="menu-btn">☰</button>
       </div>
     </nav>
+    
+  </nav>
   </header>
 
 
-<section class="landpagina"> <!-- section 0 	"start pagina"-->
+<section class="landpagina"> <!-- section 1 	"start pagina"-->
+	
+	<div class="MC_live_announcement">
+    <p>Get ready for<a href="/test/test.html"> Minecraft Live</a> <p class="arrow">➔</p></p> 
+   </div>
+
 	<video autoplay muted loop id="background_video">
-		<source class="main_video" src="videos/Screen Recording 2025-09-10 at 16.15.17.mov" type="video/mp4">
+		<source class="main_video" src="videos/background_video.mov" type="video/mp4">
 	</video>
+
 		<h2 class="MC_Heading_1">Create. Explore. Survive.</h2>
 		<button class="scroll_button">
-			<a href="#scrollstop" class="MC_Button"><p>Dig Deeper</p></a>
+			<a href="#scrollstop"><p>Dig Deeper</p></a>
+			<svg viewBox="0 0 8 8" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+				<rect x="2" y="1" width="1" height="1" fill="white"/>
+				<rect x="3" y="2" width="1" height="1" fill="white"/>
+				<rect x="4" y="3" width="1" height="1" fill="white"/>
+				<rect x="3" y="4" width="1" height="1" fill="white"/>
+				<rect x="2" y="5" width="1" height="1" fill="white"/>
+			</svg>
 		</button>
 
 		 <button class="MC_Animation_toggle" aria-hidden="true">  <!-- Moet hidden zijn -->
@@ -43,20 +93,20 @@
 		
 	</section>
 	
-<section> <!-- section 1 	"platforms"-->
+<section class="MC_platforms"> <!-- section 2 	"platforms"-->
 		<h2 class="MC_Heading_2" id="scrollstop">
 			Minecraft Platforms + Game Features
 	</h2>
 
-		<button class="MC_Tabs_tablist_tab">
-			<p>
+		<button>
+			<a>
 				Platforms
-			</p>
+			</a>
 		</button>
 		<button>
-			<p>
+			<a>
 				Features
-			</p>
+			</a>
 		</button>
 
 		<p>
@@ -68,17 +118,27 @@
 		<p>
 			*macOS and Linux are compatible with Minecraft: Java Edition only.
 		</p>
+
+		
 	</section>
 
-<section> <!-- section 2 	"purchase menu"-->
+<section class="purchase_menu"> <!-- section 3 	"purchase menu"-->
 		<ul>
 			<li class="MC_PurchaseMenu">
 				<img src="images/buy-platform-icon.png" alt="buy icon">
 				<p class="MC_PurchaseMenu_text">
 						Windows/Mac/Linux*
 				</p>
-				<a class="MC_Button MC_Button_transparent MC_Glyph_Link_B" href="/store/minecraft-deluxe-collection-pc">
-						<p>Buy now</p>
+				<a class="MC_buynow_btn" href="/store/minecraft-deluxe-collection-pc">
+						<p>Buy now
+							<svg viewBox="0 0 8 8" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+								<rect x="2" y="1" width="1" height="1" fill="white"/>
+								<rect x="3" y="2" width="1" height="1" fill="white"/>
+								<rect x="4" y="3" width="1" height="1" fill="white"/>
+								<rect x="3" y="4" width="1" height="1" fill="white"/>
+								<rect x="2" y="5" width="1" height="1" fill="white"/>
+							</svg>
+						</p>
 						
 				</a>
 		</li>
@@ -88,6 +148,15 @@
 			
 			<a class="MC_PurchaseMenu_platforms_link" href="https://www.nintendo.com/store/products/minecraft-106679?utm_source=mcnet_nintendo_pmp_mcov">
 					Nintendo
+					<svg width="17" height="17" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+						<rect x="3" y="4" width="1" height="1" fill="#b8aca7"/>
+						<rect x="4" y="3" width="1" height="1" fill="#b8aca7"/>
+						<rect x="6" y="2" width="1" height="1" fill="#b8aca7"/>
+						<rect x="5" y="1" width="1" height="1" fill="#b8aca7"/>
+						<rect x="4" y="1" width="1" height="1" fill="#b8aca7"/>
+						<rect x="6" y="1" width="1" height="1" fill="#b8aca7"/>
+						<rect x="6" y="3" width="1" height="1" fill="#b8aca7"/>
+					</svg>
 			</a>
 	</li>
 
@@ -96,6 +165,15 @@
 		
 		<a class="MC_PurchaseMenu_platforms_link" href="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&amp;utm_source=mcnet_chromebook_pmp_mcov">
 				Chromebook
+				<svg width="17" height="17" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+					<rect x="3" y="4" width="1" height="1" fill="#b8aca7"/>
+					<rect x="4" y="3" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="2" width="1" height="1" fill="#b8aca7"/>
+					<rect x="5" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="4" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="3" width="1" height="1" fill="#b8aca7"/>
+				</svg>
 		</a>
 	</li>
 
@@ -104,14 +182,32 @@
 		
 		<a class="MC_PurchaseMenu_platforms_link" href="https://www.xbox.com/en-US/games/store/minecraft/9MVXMVT8ZKWC?cid=mcnet_xbox_pmp_mcov">
 				Xbox
+				<svg width="17" height="17" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+					<rect x="3" y="4" width="1" height="1" fill="#b8aca7"/>
+					<rect x="4" y="3" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="2" width="1" height="1" fill="#b8aca7"/>
+					<rect x="5" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="4" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="3" width="1" height="1" fill="#b8aca7"/>
+				</svg>
 		</a>
 	</li>
 
 	<li class="MC_PurchaseMenu">
 		<img class="MC_PurchaseMenu_platforms_icon" src="images/Platform-Icon_Fire-TV@2x.png" alt="Amazon Fire logo">
 		
-		<a class="MC_PurchaseMenu_platforms_link MC_Glyph_Link_A" href="https://www.amazon.com/Mojang-Minecraft-Pocket-Edition/dp/B00992CF6W?utm_source=mcnet_amazonfire_pmp_mcov">
+		<a class="MC_PurchaseMenu_platforms_link" href="https://www.amazon.com/Mojang-Minecraft-Pocket-Edition/dp/B00992CF6W?utm_source=mcnet_amazonfire_pmp_mcov">
 				Amazon Fire
+				<svg width="17" height="17" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+					<rect x="3" y="4" width="1" height="1" fill="#b8aca7"/>
+					<rect x="4" y="3" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="2" width="1" height="1" fill="#b8aca7"/>
+					<rect x="5" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="4" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="3" width="1" height="1" fill="#b8aca7"/>
+				</svg>
 		</a>
 	</li>
 
@@ -120,6 +216,15 @@
 		
 		<a class="MC_PurchaseMenu_platforms_link MC_Glyph_Link_A" href="https://apps.apple.com/app/apple-store/id479516143?pt=515380&ct=mcnet_nonJP_ios_pmp_mcov&mt=8">
 				IOS
+				<svg width="17" height="17" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+					<rect x="3" y="4" width="1" height="1" fill="#b8aca7"/>
+					<rect x="4" y="3" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="2" width="1" height="1" fill="#b8aca7"/>
+					<rect x="5" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="4" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="3" width="1" height="1" fill="#b8aca7"/>
+				</svg>
 		</a>
 	</li>
 
@@ -128,6 +233,15 @@
 		
 		<a class="MC_PurchaseMenu_platforms_link MC_Glyph_Link_A" href="https://store.playstation.com/nl-nl/product/UP4433-PPSA17221_00-MINECRAFTPS50000/?utm_source=mcnet_playstation_pmp_mcov">
 				Playstation
+				<svg width="17" height="17" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+					<rect x="3" y="4" width="1" height="1" fill="#b8aca7"/>
+					<rect x="4" y="3" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="2" width="1" height="1" fill="#b8aca7"/>
+					<rect x="5" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="4" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="3" width="1" height="1" fill="#b8aca7"/>
+				</svg>
 		</a>
 	</li>
 
@@ -136,12 +250,21 @@
 		
 		<a class="MC_PurchaseMenu_platforms_link MC_Glyph_Link_A" href="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&utm_source=mcnet_android_pmp_mcov">
 				Android
+				<svg width="17" height="17" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+					<rect x="3" y="4" width="1" height="1" fill="#b8aca7"/>
+					<rect x="4" y="3" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="2" width="1" height="1" fill="#b8aca7"/>
+					<rect x="5" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="4" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="1" width="1" height="1" fill="#b8aca7"/>
+					<rect x="6" y="3" width="1" height="1" fill="#b8aca7"/>
+				</svg>
 		</a>
 	</li>
 		</ul>
 	</section>
 
-<section> <!-- section 3 	"discover Minecraft" carousel-->
+<section class="section_discover"> <!-- section 4 	"discover Minecraft" carousel-->
 		<h2>Discover the world of Minecraft</h2>
 		<p>
 			Build anything you can imagine, uncover eerie mysteries, and survive the night in the ultimate sandbox adventure game. In Minecraft, every playthrough is different, and unforgettable adventures await behind every corner. Explore and craft your way through an infinite world that's yours to shape, one block at a time.
@@ -152,259 +275,324 @@
 		</p>
 
 		<ul class="carousel_discover_the_world">
-			<li>
+			<li class="carouselitem">
 				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
 			</li>
 	
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			<li class="carouselitem">
+				<img src="images/EXPLORE_PDPScreenshotRefresh2024_multipleBiomes_01.png" alt="multiple  biomes">
 			</li>
 	
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			<li class="carouselitem">
+				<img src="images/PLAYTOGETHERPDPScreenshotRefresh2024_exitingPortal_01.webp" alt="Build Almost Anything">
 			</li>
 	
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			<li class="carouselitem">
+				<img src="images/EXPERIENCE_MORE_MinecraftEDU_PrivacyProdigy_darkWeb.jpeg" alt="Build Almost Anything">
 			</li>
 	
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
-			</li>
-	
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
-			</li>
-	
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
-			</li>
-	
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
-			</li>
-	
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
-			</li>
-	
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
-			</li>
-	
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
-			</li>
-	
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
-			</li>
-			
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
+			<li class="carouselitem">
+				<img src="images/SURVIVE.jpeg" alt="Build Almost Anything">
 			</li>
 
-			<li>
-				<img src="images/CREATE_BuildAlmostAnything.png" alt="Build Almost Anything">
-			</li>
-				
 		</ul>
-
+		<div class="discover_controls">
+	 
+			<!-- left -->
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 78 97.5" enable-background="new 0 0 78 78" xml:space="preserve"><title>Arrow Up</title><desc>Created with Sketch.</desc>
+				<g  id="discover_carousel_knopL">
+					<polygon points="24,30 30,30 30,24 24,24 24,30  "/><polygon points="18,36 24,36 24,30 18,30 18,36  "/><polygon points="12,42 18,42 18,36 12,36 12,42  "/><path d="M42,18v-6h-6v6h-6v6h6c0,14,0,28,0,42h6c0-14,0-28,0-42h6v-6H42L42,18z"/><polygon points="48,24 48,30 54,30 54,24 48,24  "/><polygon points="54,30 54,36 60,36 60,30 54,30  "/><polygon points="60,36 60,42 66,42 66,36 60,36  "/>
+				</g>
+			</svg>
+	
+			<!-- right -->
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 78 97.5"  xml:space="preserve"><title>Arrow Up</title><desc>Created with Sketch.</desc>
+				<g id="discover_carousel_knopR">
+					<polygon points="24,30 30,30 30,24 24,24 24,30  "/><polygon points="18,36 24,36 24,30 18,30 18,36  "/><polygon points="12,42 18,42 18,36 12,36 12,42  "/><path d="M42,18v-6h-6v6h-6v6h6c0,14,0,28,0,42h6c0-14,0-28,0-42h6v-6H42L42,18z"/><polygon points="48,24 48,30 54,30 54,24 48,24  "/><polygon points="54,30 54,36 60,36 60,30 54,30  "/><polygon points="60,36 60,42 66,42 66,36 60,36  "/>
+				</g>
+			</svg>
+	
+			<!-- svg van: Created by Mikkel Mikkelsen from the Noun Project -->
+		</div>
 </section>
 
-<section> <!-- section 4 	"How Minecraft works"-->
-	<h2 class="MC_Heading_2">
+<section class="how_minecraft"> <!-- section 5 	"How Minecraft works"-->
+	<!-- soort van border, border-image via css kreeg niet het gewenste resultaat -->
+	<svg viewBox="0 0 128 96" xmlns="http://www.w3.org/2000/svg" width="128" height="96">
+		<g transform="scale(1,-1) translate(0,-96)">
+			<polygon 
+				points="0,32 0,0 32,0 32,32 64,32 64,0 128,0 128,64 96,64 96,32 64,32 64,64 32,64 32,96 0,96 0,64 32,64 32,32"/>
+		</g>
+	</svg>
+	
+	
+	
+	<h2>
 		How Minecraft works
 	</h2>
-		<div class="sec3_text_en_image_container">
-			<img class="sec3_card_poster" src="images/MC-About_Key-Art_Gather_Resources_600x800.png" alt="Minecraft's Steve swings a pickaxe">
-				<h3 class="MC_Heading_3">
-					Gather Resources
-				</h3>
-				<p>
-					The typical journey starts with punching a tree to gather wood. The rest of your Minecraft adventure is up to you, whether you mine for precious ores or seek out rare materials. Just make sure to stock up on food!
-				</p>
-		</div>
-		<div class="sec3_text_en_image_container">
-			<img class="sec3_card_poster" src="images/MC-About_Key-Art_Survive_the_Night_600x800.png" alt="Minecraft's Alex swings their sword at a creeper">
-			<h3 class="MC_Heading_3">
+	<ul>
+		<li>
+			<img src="images/MC-About_Key-Art_Gather_Resources_600x800.png" alt="Minecraft's Steve swings a pickaxe">
+			<h3>
+				Gather Resources
+			</h3>
+			<p>
+				The typical journey starts with punching a tree to gather wood. The rest of your Minecraft adventure is up to you, whether you mine for precious ores or seek out rare materials. Just make sure to stock up on food!
+			</p>
+
+		</li>
+		<li>
+			<img src="images/MC-About_Key-Art_Survive_the_Night_600x800.png" alt="Minecraft's Alex swings their sword at a creeper">
+			<h3>
 					Survive the Night
 			</h3>
 				<p>
 					When the sun goes down, hostile mobs abound. Will you face them or sleep through the night? And remember: it's always dark underground...
 				</p>
-		</div>
-
-		<div class="MC_cardA__card_front">
-			<img class="sec3_card_poster" src="images/MC-About_Key-Art_Build_Amazing_Things_600x800.png" alt="Minecraft's Alex and Steve building together with stone and wooden scaffolds">
-			<h3 class="MC_Heading_3">
+		</li>
+		<li>
+			<img src="images/MC-About_Key-Art_Build_Amazing_Things_600x800.png" alt="Minecraft's Alex and Steve building together with stone and wooden scaffolds">
+			<h3>
 					Build Amazing Things
 			</h3>
 				<p>
 					Minecraft is the ultimate building game. Craft tools, build a humble shelter, or engineer your base with redstone. Can you build a base in the Nether? Only one way to find out.
 				</p>
-		</div>
+		</li>
+	</ul>
 	</section>
 
-<section> <!-- section 5 	"different gamemodes" carousel--> 
+<section class="explore_gamemodes"> <!-- section 6 	"different gamemodes" carousel--> 
 	<ul class="carousel_explore_gamemodes">
-		<li>
-			<img src="images/OV_PMP_GameModeCarousel_Art_Slide1_Desktop1.png" alt="Explore Gamemodes">
-			<div class="carousel2_head_en_text">     
+		<li class="carouselitem2">
+			<img src="images/OV_PMP_GameModeCarousel_Art_Slide1_Desktop1.png" alt="Explore Gamemodes">   
 				<h2>
 					Explore Gamemodes 
 				</h2>
 				<p>
 					Shape your Minecraft experience with creative mode or survival mode to create without restraints or literally fight to survive.
 				</p>
-			</div>
 		</li>
 	
-			<li>
-				<img src="images/OV_PMP_GameModeCarousel_Art_Slide2_Desktop1.png" alt="Survival Mode">
-				<div class="carousel2_head_en_text">     
+			<li class="carouselitem2">
+				<img src="images/OV_PMP_GameModeCarousel_Art_Slide2_Desktop1.png" alt="Survival Mode">    
 					<h2>
 						Survival mode
 					</h2>
 					<p>
 						For the daring adventurers, nothing beats battling dangerous mobs, exploring dizzying landscapes, and crafting your way to victory in Survival mode.
 					</p>
-				</div>
 			</li>
 	
-			<li>
-				<img src="images/OV_PMP_GameModeCarousel_Art_Slide3_Desktop1.png" alt="Creative Mode">
-				<div class="carousel2_head_en_text">     
+			<li class="carouselitem2">
+				<img src="images/OV_PMP_GameModeCarousel_Art_Slide3_Desktop1.png" alt="Creative Mode">  
 					<h2>
 						Creative mode
 					</h2>
 					<p>
 						Set your imagination free with limitless resources, immunity to damage, and the ability to fly! In Creative mode, nothing stands in the way of the perfect build.
 					</p>
-				</div>
 			</li>
 		</ul>
+
+		<div class="discover_controls">
+	 
+			<!-- left -->
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 78 97.5" enable-background="new 0 0 78 78" xml:space="preserve"><title>Arrow Up</title><desc>Created with Sketch.</desc>
+				<g  id="gamemode_carousel_knopL">
+					<polygon points="24,30 30,30 30,24 24,24 24,30  "/><polygon points="18,36 24,36 24,30 18,30 18,36  "/><polygon points="12,42 18,42 18,36 12,36 12,42  "/><path d="M42,18v-6h-6v6h-6v6h6c0,14,0,28,0,42h6c0-14,0-28,0-42h6v-6H42L42,18z"/><polygon points="48,24 48,30 54,30 54,24 48,24  "/><polygon points="54,30 54,36 60,36 60,30 54,30  "/><polygon points="60,36 60,42 66,42 66,36 60,36  "/>
+				</g>
+			</svg>
+	
+			<!-- right -->
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 78 97.5"  xml:space="preserve"><title>Arrow Up</title><desc>Created with Sketch.</desc>
+				<g id="gamemode_carousel_knopR">
+					<polygon points="24,30 30,30 30,24 24,24 24,30  "/><polygon points="18,36 24,36 24,30 18,30 18,36  "/><polygon points="12,42 18,42 18,36 12,36 12,42  "/><path d="M42,18v-6h-6v6h-6v6h6c0,14,0,28,0,42h6c0-14,0-28,0-42h6v-6H42L42,18z"/><polygon points="48,24 48,30 54,30 54,24 48,24  "/><polygon points="54,30 54,36 60,36 60,30 54,30  "/><polygon points="60,36 60,42 66,42 66,36 60,36  "/>
+				</g>
+			</svg>
+	
+			<!-- svg van: Created by Mikkel Mikkelsen from the Noun Project -->
+		</div>
+		
 	</section>
 
-<section> <!-- section 6 	 "Play with friends"-->
-		<h2 class="MC-heading_2">
-			Play with Friends
-		</h2>
-		<p>Survive and build with friends in this cross-platform game. Join lively communities or create your own private server with Realms!</p>
+<section class="all_play_types">
+	<h2 class="MC_Heading_2">
+		Play with Friends
+	</h2>
+	<p>Survive and build with friends in this cross-platform game. Join lively communities or create your own private server with Realms!</p>
+	<section class="play_types"> <!-- section 7 	 "Play with friends"-->
+			
+		
 		<img src="images/Play_With_Friends_Online_672x360.png" alt="Play with friends online">
+		<section>
+			<ul>
+				<li>
+			<h2>Online</h2>
+		</li>
+		<li>
+			<p class="badge" role="status">
+				Public
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 29" shape-rendering="crispEdges">
+				<!-- Slot body -->
+				<rect x="3" y="12" width="14" height="11" fill="black"/>
+				<rect x="5" y="14" width="10" height="7" fill="white"/>
+				<rect x="9" y="17" width="2" height="2" fill="black"/>
+			
+				<!-- Open beugel -->
+				<rect x="10" y="5" width="3" height="7" fill="black"/>
+				<rect x="13" y="5" width="9" height="2" fill="black"/>
+				<rect x="20" y="7" width="2" height="5" fill="black"/>
+			</svg>
+		</p>
+	</li>
+	</ul>
+			<ul>
+				<li>
+					<p>Connect and play with players across the world, wherever they are.</p>
+				</li>
+				<li class="tags">
+					<p>1M+ Players</p>
+					<p>Bedrock</p>
+				</li>
+				<li>
+					<details>
+						<summary>Worlds</summary>
+						<p>Play in a custom world together with other players.</p>
+					</details>
+				</li>
+				<li>
+					<details open>
+						<summary>Servers</summary>
+						<p>Discover community-run servers, full of activities and home to thousands of players.</p>
+					</details>
+				</li>
+			</ul>
+		</section>
+	</section>
 
-	<div class="Card1_content">
-		<h3 class="Card1_h3">
-			Online
-		</h3>
-			<p>Connect and play with players across the world, wherever they are.</p>
-		</div>
-		<ul class="play_together_list">
-				<li>1M+ Players</li>
-				<li>Bedrock</li>
+	<!-- twee classes om te zorgen dat ik niet te veel css hoef te herhalen -->
+
+	<section class="play_types realms_play_type"> <!-- section 8 	"Play online"-->
+			<img src="images/Play_With_Friends_Realms_672x360.png" alt="Play with friends realms">
+			<section>
+				<ul>
+					<li>
+				<h2>Realms</h2>
+			</li>
+			<li>
+				<p class="badge" role="status">
+					Public
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 29" shape-rendering="crispEdges">
+					<!-- Slot body -->
+					<rect x="3" y="12" width="14" height="11" fill="black"/>
+					<rect x="5" y="14" width="10" height="7" fill="white"/>
+					<rect x="9" y="17" width="2" height="2" fill="black"/>
+				
+					<!-- Open beugel -->
+					<rect x="10" y="5" width="3" height="7" fill="black"/>
+					<rect x="13" y="5" width="9" height="2" fill="black"/>
+					<rect x="20" y="7" width="2" height="5" fill="black"/>
+				</svg>
+			</p>
+		</li>
 		</ul>
+				<ul>
+					<li>
+						<p>Play locally or online on your own server; a persistent online world, safely stored in the cloud.</p>
+					</li>
+					<li class="tags">
+						<p>up to 11 players</p>
+						<p>Bedrock</p>
+					</li>
+					<li>
+						<details>
+							<summary>realms plus</summary>
+							<p>Get instant access to a catalog of 150+ Marketplace Pass content items, with new fun stuff added every month.</p>
+						</details>
+					</li>
+					<li>
+						<details open>
+							<summary>java plus</summary>
+							<p>Create and manage your own personal server together with up to 10 friends.</p>
+						</details>
+					</li>
+				</ul>
+			</section>
+		</section>
 
-	<button class="dropdown_toggle" type="button">
-	<h4 class="dropdown_toggle_text">
-			Worlds
-	</h4>
-	</button>
-	<div class="dropdown_content">
-	<p>Play in a custom world together with other players.</p>
-	</div>
-
-	<button class="dropdown_toggle" type="button">
-	<h4 class="dropdown_content">
-			Servers
-	</h4>
-	</button>
-	<div class="dropdown_content">
-	<p>Discover community-run servers, full of activities and home to thousands of players.</p>
-	</div>
+	<section class="play_types local_play_type"> <!-- section 9 	"Play Local"-->
+			<img src="images/Play_With_Friends_Local_672x360.png" alt="Play with friends local">
+			<section>
+				<ul>
+					<li>
+				<h2>Co-Op</h2>
+			</li>
+			<li>
+				<p class="badge" role="status">
+					Public
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 29" shape-rendering="crispEdges">
+					<!-- Slot body -->
+					<rect x="3" y="12" width="14" height="11" fill="black"/>
+					<rect x="5" y="14" width="10" height="7" fill="white"/>
+					<rect x="9" y="17" width="2" height="2" fill="black"/>
+				
+					<!-- Open beugel -->
+					<rect x="10" y="5" width="3" height="7" fill="black"/>
+					<rect x="13" y="5" width="9" height="2" fill="black"/>
+					<rect x="20" y="7" width="2" height="5" fill="black"/>
+				</svg>
+			</p>
+		</li>
+		</ul>
+				<ul>
+					<li>
+						<p>Play couch co-op together with friends and family on your device.</p>
+					</li>
+					<li class="tags">
+						<p>4+ Players</p>
+						<p>Bedrock</p>
+					</li>
+					<li>
+						<details>
+							<summary>Worlds</summary>
+							<p>Play in a custom world together with other players on a shared platform or through a LAN.</p>
+						</details>
+					</li>
+					<li>
+						<details open>
+							<summary>Servers</summary>
+							<p>Play with friends and family on a local private server with separate devices.</p>
+						</details>
+					</li>
+				</ul>
+			</section>
+		</section>
 </section>
 
-<section> <!-- section 7 	"Play online"-->
-		<img src="images/Play_With_Friends_Realms_672x360.png" alt="Play with friends realms">
-	<div class="Card1_content">
-		<h3 class="Card1_h3">
-			Realms
-		</h3>
-		<p>Play locally or online on your own server; a persistent online world, safely stored in the cloud.</p>
-		</div>
-		<ul class="play_together_list">
-				<li>up to 11 players</li>
-				<li>Bedrock</li>
-		</ul>
-
-	<button class="dropdown_toggle" type="button">
-	<h4 class="dropdown_toggle_text">
-			realms plus
-	</h4>
-	</button>
-	<div class="dropdown_content">
-	<p>Get instant access to a catalog of 150+ Marketplace Pass content items, with new fun stuff added every month.</p>
-	</div>
-
-	<button class="dropdown_toggle" type="button">
-	<h4 class="dropdown_content">
-			java plus
-	</h4>
-	</button>
-	<div class="dropdown_content">
-	<p>Create and manage your own personal server together with up to 10 friends.</p>
-	</div>
-	</section>
-
-<section> <!-- section 8 	"Play Local"-->
-		<img src="images/Play_With_Friends_Local_672x360.png" alt="Play with friends local">
-		<div class="Card1_content">
-			<h3 class="Card1_h3">
-				Co-Op
-			</h3>
-			<p>Play couch co-op together with friends and family on your device.</p>
-			</div>
-			<ul class="play_together_list">
-					<li>4+ Players</li>
-					<li>Bedrock</li>
-			</ul>
-	
-		<button class="dropdown_toggle" type="button">
-		<h4 class="dropdown_toggle_text">
-			Worlds
-		</h4>
-		</button>
-		<div class="dropdown_content">
-		<p>Play in a custom world together with other players on a shared platform or through a LAN.</p>
-		</div>
-	
-		<button class="dropdown_toggle" type="button">
-		<h4 class="dropdown_content">
-				Servers
-		</h4>
-		</button>
-		<div class="dropdown_content">
-		<p>Play with friends and family on a local private server with separate devices.</p>
-		</div>
-	</section>
-
-<section> <!-- section 9 	"all three games"-->
+<section class="all_games"> <!-- section 10 	"all three games"-->
 	<img src="images/PDP-Hero_Triple-Bundle_16x9.jpg" alt="All three games">
 	
-	<h2 class="MC_Heading_2   ">
+	<h2 class="MC_Heading_2">
 	Get all 3 Minecraft Games
 	</h2>	
 		<p>
 			Step into a blocky universe of creativity, thrills, and mystery with three Minecraft games in one bundle.&nbsp;The Triple Bundle includes Minecraft: Java &amp; Bedrock Edition, Minecraft Dungeons, and Minecraft Legends.
 		</p>
 
-		<button>
-			<a class="bundle_button">
-				<p>Get the Triple Bundle</p>
+			<a href="https://www.minecraft.net/en-us/store/minecraft-dungeons-legends-bundle">
+				<p >Get the Triple Bundle</p>
+				<svg viewBox="0 0 8 8"  xmlns="http://www.w3.org/2000/svg">
+					<rect x="2" y="1" width="1" height="1" fill="white"/>
+					<rect x="3" y="2" width="1" height="1" fill="white"/>
+					<rect x="4" y="3" width="1" height="1" fill="white"/>
+					<rect x="3" y="4" width="1" height="1" fill="white"/>
+					<rect x="2" y="5" width="1" height="1" fill="white"/>
+				</svg>
 			</a>
-		</button>
 	</section>
 
-<section> <!-- section 10	"Expand your world" carousel-->
+<section class="expand_section"> <!-- section 11	"Expand your world" carousel-->
 	<h2 class="MC_Heading_2">
 		Expand your world
 	</h2>
@@ -413,10 +601,9 @@
 	</p>
 
 	<ul class="carousel_updates">
-		<li>
+		<li class="carouselitem3">
 			<img src="images/MCV_SummerDrop_Hero_DotNet_Blog_Editorial_1280x768.jpg" alt="Chase the Skies">
-			
-      <div class="carousel2_head_en_text">                     
+			        
 				<h3>
 					Chase the Skies
 				</h3>
@@ -425,14 +612,21 @@
 					</p>
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							See update
+							<svg width="17" height="17" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+								<rect x="3" y="4" width="1" height="1"/>
+								<rect x="4" y="3" width="1" height="1"/>
+								<rect x="6" y="2" width="1" height="1"/>
+								<rect x="5" y="1" width="1" height="1"/>
+								<rect x="4" y="1" width="1" height="1"/>
+								<rect x="6" y="1" width="1" height="1"/>
+								<rect x="6" y="3" width="1" height="1"/>
+							</svg>
 					</a>
-			</div>
 		</li>
 
-		<li>
+		<li class="carouselitem3">
 			<img src="images/MCV_SpringDrop_DotNet_Blog_Editorial_1280x720.jpg" alt="Chase the Skies">
-			
-      <div class="carousel2_head_en_text">                     
+			                     
 				<h3>
 					Spring to Life
 				</h3>
@@ -442,13 +636,11 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							See update
 					</a>
-			</div>
 		</li>
 
-		<li>
+		<li class="carouselitem3">
 			<img src="images/Minecraft_TheGardenAwakens_DotNet_1280x768.avif" alt="Chase the Skies">
 			
-      <div class="carousel2_head_en_text">
 				<h3>
 					The Garden Awakens
 				</h3>
@@ -458,12 +650,11 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							Learn more
 					</a>
-			</div>
 		</li>
-		<li>
+
+		<li class="carouselitem3">
 			<img src="images/Vanilla-PMP_Collection-Carousel-0_Tricky-Trials_1280x768.jpg" alt="Chase the Skies">
-			
-      <div class="carousel2_head_en_text">                     
+			                  
 				<h3>
 					Tricky Trials
 				</h3>
@@ -473,12 +664,12 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							Start Exploring
 					</a>
-			</div>
 		</li>
-		<li>
+
+		<li class="carouselitem3">
 			<img src="images/Vanilla-PMP_Collection-Carousel-0_GA-Add-Ons_1280x768.webp" alt="Chase the Skies">
 			
-      <div class="carousel2_head_en_text">                    
+                  
 				<h3>
 					Add-ons
 				</h3>
@@ -488,12 +679,11 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 						Start Exploring
 					</a>
-			</div>
 		</li>
-		<li>
+
+		<li class="carouselitem3">
 			<img src="images/Vanilla-PMP_Collection-Carousel-0_Marketplace-Pass_1280x768.jpg" alt="Chase the Skies">
-			
-      <div class="carousel2_head_en_text">                      
+			                  
 				<h3>
 					Marketplace Pass
 				</h3>
@@ -503,12 +693,11 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							Learn more
 					</a>
-			</div>
 		</li>
-		<li>
+
+		<li class="carouselitem3">
 			<img src="images/Vanilla-PMP_Collection-Carousel-0_Realms_1280x768.jpg" alt="Chase the Skies">
-			
-      <div class="carousel2_head_en_text">                     
+			              
 				<h3>
 					Minecraft Realms
 				</h3>
@@ -518,12 +707,11 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							Learn more
 					</a>
-			</div>
 		</li>
-		<li>
+		
+		<li class="carouselitem3">
 			<img src="images/Vanilla-PMP_Collection-Carousel-0_Marketplace_1280x768.jpg" alt="Chase the Skies">
-			
-      <div class="carousel2_head_en_text">                     
+			               
 				<h3>
 					Minecraft Marketplace
 				</h3>
@@ -533,12 +721,11 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							Explore the Marketplace
 					</a>
-			</div>
 		</li>
-		<li>
+		
+		<li class="carouselitem3">
 			<img src="images/Vanilla-PMP_Collection-Carousel-0_Trails-and-Tales_1280x768.webp" alt="Chase the Skies">
-			
-      <div class="carousel2_head_en_text">                     
+			                
 				<h3>
 					Trails & Tales
 				</h3>
@@ -548,12 +735,12 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							Learn more
 					</a>
-			</div>
 		</li>
-		<li>
+		
+		<li class="carouselitem3">
 			<img src="images/Vanilla-PMP_Collection-Carousel-0_The-Wild-Update_1280x768.webp" alt="Chase the Skies">
 			
-      <div class="carousel2_head_en_text">                      
+                     
 				<h3>
 					The Wild Update
 				</h3>
@@ -563,12 +750,13 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							Learn More
 					</a>
-			</div>
+
 		</li>
-		<li>
+		
+		<li class="carouselitem3">
 			<img src="images/Vanilla-PMP_Collection-Carousel-0_Caves-and-Cliffs_1280x768.jpg" alt="Chase the Skies">
 			
-      <div class="carousel2_head_en_text">                     
+                 
 				<h3>
 					Caves & Cliffs
 				</h3>
@@ -578,12 +766,13 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							Learn More
 					</a>
-			</div>
+
 		</li>
-		<li>
+		
+		<li class="carouselitem3">
 			<img src="images/Vanilla-PMP_Collection-Carousel-0_Nether-Update_1280x768.jpg" alt="Chase the Skies">
 			
-      <div class="carousel2_head_en_text">                      
+                     
 				<h3>
 					Nether Update
 				</h3>
@@ -593,12 +782,13 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							Learn More
 					</a>
-			</div>
+
 		</li>
-		<li>
+		
+		<li class="carouselitem3">
 			<img src="images/Vanilla-PMP_Collection-Carousel-0_Buzzy-Bees_1280x768.jpg" alt="Chase the Skies">
 			
-      <div class="carousel2_head_en_text">                      
+                     
 				<h3>
 					Buzzy Bees
 				</h3>
@@ -608,12 +798,11 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							Learn More
 					</a>
-			</div>
 		</li>
-		<li>
+		
+		<li class="carouselitem3">
 			<img src="images/Vanilla-PMP_Collection-Carousel-0_Village-and-Pillage_1280x768.jpg" alt="Chase the Skies">
-			
-      <div class="carousel2_head_en_text">                     
+			           
 				<h3>
 					Village & Pillage
 				</h3>
@@ -623,12 +812,12 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							Learn More
 					</a>
-			</div>
 		</li>
-		<li>
+		
+		<li class="carouselitem3">
 			<img src="images/Vanilla-PMP_Collection-Carousel-0_Update-Aquatic_1280x768.jpg" alt="Chase the Skies">
 			
-      <div class="carousel2_head_en_text">                   
+           
 				<h3>
 					Update Aquatic
 				</h3>
@@ -638,12 +827,30 @@
 					<a href="https://www.minecraft.net/updates/introducing-chase-the-skies">
 							Learn More
 					</a>
-			</div>
+
 		</li>
 	</ul>
+	
+	<div >
+		<!-- left -->
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 78 97.5" enable-background="new 0 0 78 78" xml:space="preserve"><title>Arrow Up</title><desc>Created with Sketch.</desc>
+			<g  id="updates_carousel_knopL">
+				<polygon points="24,30 30,30 30,24 24,24 24,30  "/><polygon points="18,36 24,36 24,30 18,30 18,36  "/><polygon points="12,42 18,42 18,36 12,36 12,42  "/><path d="M42,18v-6h-6v6h-6v6h6c0,14,0,28,0,42h6c0-14,0-28,0-42h6v-6H42L42,18z"/><polygon points="48,24 48,30 54,30 54,24 48,24  "/><polygon points="54,30 54,36 60,36 60,30 54,30  "/><polygon points="60,36 60,42 66,42 66,36 60,36  "/>
+			</g>
+		</svg>
+
+		<!-- right -->
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 78 97.5"  xml:space="preserve"><title>Arrow Up</title><desc>Created with Sketch.</desc>
+			<g id="updates_carousel_knopR">
+				<polygon points="24,30 30,30 30,24 24,24 24,30  "/><polygon points="18,36 24,36 24,30 18,30 18,36  "/><polygon points="12,42 18,42 18,36 12,36 12,42  "/><path d="M42,18v-6h-6v6h-6v6h6c0,14,0,28,0,42h6c0-14,0-28,0-42h6v-6H42L42,18z"/><polygon points="48,24 48,30 54,30 54,24 48,24  "/><polygon points="54,30 54,36 60,36 60,30 54,30  "/><polygon points="60,36 60,42 66,42 66,36 60,36  "/>
+			</g>
+		</svg>
+
+		<!-- svg van: Created by Mikkel Mikkelsen from the Noun Project -->
+	</div>
 	</section>
 
-<section> <!-- section 11 "Whats new" 	AAHHHHHHHHHHH  carousel -->
+<section class="whats_new"> <!-- section 12 "Whats new" 	AAHHHHHHHHHHH  carousel -->
 	<h2 class="MC_Heading_2">
 		Whats new in Minecraft?
 	</h2>
@@ -652,55 +859,55 @@
 	</p>
 	<a href="https://www.minecraft.net/en-us/articles">
 		See all news
+		<svg width="17" height="17" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+			<rect x="3" y="4" width="1" height="1"/>
+			<rect x="4" y="3" width="1" height="1"/>
+			<rect x="6" y="2" width="1" height="1"/>
+			<rect x="5" y="1" width="1" height="1"/>
+			<rect x="4" y="1" width="1" height="1"/>
+			<rect x="6" y="1" width="1" height="1"/>
+			<rect x="6" y="3" width="1" height="1"/>
+		</svg>
 </a>
 
-	<ul class="carousel_whats_new">
-		<li>
+	<ul class="whats_new_carousel">
+		<li class="carouselitem4">
 			<img src="images/MCL_Fall25_KeyArt_FINAL_LOGO_277x277.webp" alt="Minecraft Live">
-			
-      <div class="carousel4_head_en_text">
 				<p>
 					News
 				</p>
 					<h3>
 					Minecraft LIVE! September 27th!
 					</h3>
-				<p>
+				<a>
 					New game drops! Developers! More! 
-				</p>
-			</div>
+				</a>
 		</li>
 
 		<li>
 			<img src="images/minecraft_superman_net_blog_277x277.jpg" alt="Superman DLC">
-			
-      <div class="carousel4_head_en_text">
 				<p>
 					Marketplace
 				</p>
 					<h3>
 					Superman DLC
 					</h3>
-				<p>
+				<a>
 					Time to save Metropolis
-				</p>
-			</div>
+				</a>
 		</li>
 
 		<li>
 			<img src="images/25w37a_277x277.jpg" alt="Minecraft 25w37a Snapshot">
-			
-      <div class="carousel4_head_en_text">
 				<p>
 					News
 				</p>
 					<h3>
 					Minecraft Snapshotc 25w37a
 					</h3>
-				<p>
+				<a>
 					a Minecraft Java Snapshot
-				</p>
-			</div>
+				</a>
 		</li>
 
 		<li>
@@ -713,231 +920,410 @@
 					<h3>
 					OppoSuits x Minecraft
 					</h3>
-				<p>
+				<a>
 					A collection built For Every Crafter
-				</p>
-			</div>
+				</a>
 		</li>
 		
 		<li>
 			<img src="images/fern-1x1.jpg" alt="Fern">
-			
-      <div class="carousel4_head_en_text">
 				<p>
 					Deep Dives
 				</p>
 					<h3>
 					Taking Inventory: Fern
 					</h3>
-				<p>
+				<a>
 					An unnoticed Overworld delight
-				</p>
-			</div>
+				</a>
 		</li>
 
 		<li>
 			<img src="images/Marketplace_DotNet_277x277_MPPSEP.jpg" alt="Marketplace September content">
-			
-      <div class="carousel4_head_en_text">
 				<p>
 					Marketplace
 				</p>
 					<h3>
 					Marketplace Content: September 2025
 					</h3>
-				<p>
+				<a>
 					Time to slay boredom with this month's Marketplace Pass and Realms Plus
-				</p>
-			</div>
+				</a>
 		</li>
 
 		<li>
 			<img src="images/MC_CommunityChallengeCopper_NetBlogEditorial_277x277.jpg" alt="copper mining challenge completed">
-			
-      <div class="carousel4_head_en_text">
 				<p>
 					News
 				</p>
 					<h3>
 					Copper Mining challenge completed
 					</h3>
-				<p>
+				<a>
 					How to claim your Copper Collector reward
-				</p>
-			</div>
+				</a>
 		</li>
 
 		<li>
 			<img src="images/25w36a_277x277.jpg" alt="Minecraft 25w36a Snapshot">
-			
-      <div class="carousel4_head_en_text">
 				<p>
 					News
 				</p>
 					<h3>
 					Minecraft Snapshotc 25w36b
 					</h3>
-				<p>
+				<a>
 					a Minecraft Java Snapshot
-				</p>
-			</div>
+				</a>
 		</li>
 
 		<li>
 			<img src="images/MCV_CopperChallenge_editorial_277x277.jpg" alt="copper minin challenge">
-			
-      <div class="carousel4_head_en_text">
 				<p>
 					News
 				</p>
 					<h3>
 					Join a COpper mining challenge
 					</h3>
-				<p>
+				<a>
 					Gear up for The Copper Age with Rewards
-				</p>
-			</div>
+				</a>
 		</li>
 
 		<li>
 			<img src="images/noj0825-277x277.jpg" alt="copper minin challenge">
-			
-      <div class="carousel4_head_en_text">
 				<p>
 					News
 				</p>
 					<h3>
 					New on Java Realms: The Map is Right
 					</h3>
-				<p>
+				<a>
 					Which of these 13 maps wants to be a millionaire?
-				</p>
-			</div>
+				</a>
 		</li>
 	</ul>
+	<div >
+		<!-- left -->
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 78 97.5" enable-background="new 0 0 78 78" xml:space="preserve"><title>Arrow Up</title><desc>Created with Sketch.</desc>
+			<g  id="news_carousel_knopL">
+				<polygon points="24,30 30,30 30,24 24,24 24,30  "/><polygon points="18,36 24,36 24,30 18,30 18,36  "/><polygon points="12,42 18,42 18,36 12,36 12,42  "/><path d="M42,18v-6h-6v6h-6v6h6c0,14,0,28,0,42h6c0-14,0-28,0-42h6v-6H42L42,18z"/><polygon points="48,24 48,30 54,30 54,24 48,24  "/><polygon points="54,30 54,36 60,36 60,30 54,30  "/><polygon points="60,36 60,42 66,42 66,36 60,36  "/>
+			</g>
+		</svg>
+
+		<!-- right -->
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 78 97.5"  xml:space="preserve"><title>Arrow Up</title><desc>Created with Sketch.</desc>
+			<g id="news_carousel_knopR">
+				<polygon points="24,30 30,30 30,24 24,24 24,30  "/><polygon points="18,36 24,36 24,30 18,30 18,36  "/><polygon points="12,42 18,42 18,36 12,36 12,42  "/><path d="M42,18v-6h-6v6h-6v6h6c0,14,0,28,0,42h6c0-14,0-28,0-42h6v-6H42L42,18z"/><polygon points="48,24 48,30 54,30 54,24 48,24  "/><polygon points="54,30 54,36 60,36 60,30 54,30  "/><polygon points="60,36 60,42 66,42 66,36 60,36  "/>
+			</g>
+		</svg>
+
+		<!-- svg van: Created by Mikkel Mikkelsen from the Noun Project -->
+	</div>
 	</section>
 
-<section> <!-- section 12	"FAQ"-->
-	<h2>
+<section> <!-- section 13	"FAQ"-->
+	<h2 class="MC_Heading_2">
 		Frequently Asked Questions
 	</h2>
 
-	<ul>
-		<div class="FAQ_menu">
-			<button class="FAQ_menu_toggle" type="button">
-				<p>Is Minecraft a multiplayer game?</p>
-			</button>
-				<p>
-					You can play Minecraft online or as a multiplayer game. Learn how to play Bedrock in a <a href="https://help.minecraft.net/hc/en-us/articles/4410316619533-Play-Minecraft-Bedrock-Edition-Online-in-a-Multiplayer-Server"><b>join a multiplayer server in Java</b></a>.
-				</p>
-		</div>
-
-		<div class="FAQ_menu">
-			<button class="FAQ_menu_toggle" type="button">
-				<p>Does Minecraft get Updated?</p>
-			</button>
-				<p>
-					Yes, Minecraft game drops typically happen several times per year. Stay tuned for the next Minecraft update by checking out our <a href="https://help.minecraft.net/hc/en-us/articles/4410316619533-Play-Minecraft-Bedrock-Edition-Online-in-a-Multiplayer-Server"><b>blog.</b></a>.
-				</p>
-		</div>
-		
-		<div class="FAQ_menu">
-			<button class="FAQ_menu_toggle" type="button">
-				<p>What type of game is Minecraft</p>
-			</button>
-				<p>
-					Minecraft is an open world sandbox game. If you enjoy action-adventure games that also involve creativity and building, you'll love Minecraft.
-				</p>
-		</div>
-		
-		<div class="FAQ_menu">
-			<button class="FAQ_menu_toggle" type="button">
-				<p>What age is Minecraft for?</p>
-			</button>
-				<p>
-					Minecraft has an ESRB rating of Everyone 10+. As a sandbox action-adventure game, it's the perfect game for players of all ages!
-				</p>
-		</div>
-		
-		<div class="FAQ_menu">
-			<button class="FAQ_menu_toggle" type="button">
-				<p>Can you Beat Minecraft?</p>
-			</button>
-				<p>
-					Minecraft is a sandbox game, so there isn't an official "end" to the game. However, many players say they "beat the game" once they kill the Ender Dragon.
-				</p>
-		</div>
-		
-		<div class="FAQ_menu">
-			<button class="FAQ_menu_toggle" type="button">
-				<p>When did Minecraft release?</p>
-			</button>
-				<p>
-					The first version of Minecraft was released in 2009 for PC players, with the full version releasing in 2011. Since its release, it's been enjoyed by millions of players across the world. Get Minecraft today to experience this captivating virtual world.
-				</p>
-		</div>
-		
-	</ul>
+		<ul class="faq">
+			<li>
+				<details>
+					<summary>Is Minecraft a multiplayer game?</summary>
+					<p>
+						You can play Minecraft online or as a multiplayer game. Learn how to play Bedrock in a 
+						<a href="https://help.minecraft.net/hc/en-us/articles/4410316619533-Play-Minecraft-Bedrock-Edition-Online-in-a-Multiplayer-Server">
+							<b>join a multiplayer server in Java</b>
+						</a>.
+					</p>
+				</details>
+			</li>
+			<li>
+				<details>
+					<summary>Does Minecraft get updated?</summary>
+					<p>
+						Yes, Minecraft game drops typically happen several times per year. Stay tuned for the next update by checking out our 
+						<a href="https://help.minecraft.net/hc/en-us/articles/4410316619533-Play-Minecraft-Bedrock-Edition-Online-in-a-Multiplayer-Server"><b>blog</b></a>.
+					</p>
+				</details>
+			</li>
+			<li>
+				<details>
+					<summary>What type of game is Minecraft?</summary>
+					<p>Minecraft is an open world sandbox game...</p>
+				</details>
+			</li>
+			<li>
+				<details>
+					<summary>What age is Minecraft for?</summary>
+					<p>Minecraft has an ESRB rating of Everyone 10+...</p>
+				</details>
+			</li>
+			<li>
+				<details>
+					<summary>Can you beat Minecraft?</summary>
+					<p>Minecraft is a sandbox game, so there isn't an official "end"...</p>
+				</details>
+			</li>
+			<li>
+				<details>
+					<summary>When did Minecraft release?</summary>
+					<p>The first version of Minecraft was released in 2009...</p>
+				</details>
+			</li>
+		</ul>
+	
 	</section>
 
-<footer>
-	<h2 class="MC_heading_2">
-		Follow Minecraft
-	</h2>
-	<ul>
-		<li> <!-- Youtube -->
-			<a href="https://www.youtube.com/minecraft" >
-					<svg xmlns="http://www.w3.org/2000/svg">
+	<footer class="MC_Footer">
+		<section> <!-- social media icons-->
+			<h2 class="MC_Heading_5">Follow Minecraft</h2>
+					<ul class="footer_socials">               
+						<li class="footer_icon">
+							<a href="https://www.youtube.com/minecraft">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" role="presentation">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M29.3904 12.4894C30.4184 12.7529 31.229 13.5247 31.5058 14.5035C32.0198 16.2918 32 20.0188 32 20.0188C32 20.0188 32 23.7271 31.5058 25.5153C31.229 26.4941 30.4184 27.2659 29.3904 27.5294C27.5123 28 20 28 20 28C20 28 12.5074 28 10.6096 27.5106C9.58155 27.2471 8.771 26.4753 8.49423 25.4965C8 23.7271 8 20 8 20C8 20 8 16.2918 8.49423 14.5035C8.771 13.5247 9.60132 12.7341 10.6096 12.4706C12.4876 12 20 12 20 12C20 12 27.5123 12 29.3904 12.4894ZM23.855 20.0001L17.6079 23.426V16.5742L23.855 20.0001Z" fill="white"></path>
+								</svg>
+							</a>  
+						</li>
+						<li>
+							<a href="https://www.instagram.com/minecraft/">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" role="presentation">
+						<rect width="40" height="40" rx="20" fill="#262423"></rect>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M19.9952 10.1623C23.1998 10.1623 23.5761 10.1766 24.8427 10.2338C26.0141 10.2862 26.6476 10.4815 27.0713 10.6481C27.6333 10.8672 28.0333 11.1244 28.4524 11.5436C28.8712 11.9627 29.1333 12.3628 29.3477 12.9248C29.5093 13.3487 29.7093 13.9821 29.7617 15.1538C29.8188 16.4207 29.8332 16.797 29.8332 20.0024C29.8332 23.2078 29.8188 23.584 29.7617 24.8509C29.7093 26.0226 29.5143 26.6561 29.3477 27.08C29.1286 27.642 28.8712 28.042 28.4524 28.4612C28.0333 28.8804 27.6333 29.1423 27.0713 29.3566C26.6476 29.5185 26.0141 29.7186 24.8427 29.771C23.5761 29.8281 23.1998 29.8424 19.9952 29.8424C16.7905 29.8424 16.4142 29.8281 15.1476 29.771C13.9762 29.7186 13.3428 29.5233 12.919 29.3566C12.7978 29.3094 12.6841 29.2603 12.5761 29.2083C12.5117 29.1771 12.4493 29.145 12.3884 29.1115C12.0791 28.9411 11.8126 28.7359 11.5382 28.4612C11.1192 28.042 10.8571 27.642 10.643 27.08C10.481 26.6561 10.281 26.0226 10.2286 24.8509C10.2028 24.2784 10.1858 23.8878 10.1747 23.3358C10.1615 22.6663 10.1571 21.7593 10.1571 20.0024C10.1571 16.797 10.1715 16.4207 10.2286 15.1538C10.281 13.9821 10.4761 13.3487 10.643 12.9248C10.862 12.3628 11.1192 11.9627 11.5382 11.5436C11.957 11.1244 12.357 10.8625 12.919 10.6481C13.3428 10.4862 13.9762 10.2862 15.1476 10.2338C16.4142 10.1719 16.7952 10.1623 19.9952 10.1623ZM19.9952 8C16.7381 8 16.3284 8.01428 15.0475 8.07147C13.7715 8.12859 12.9 8.33341 12.138 8.62873C11.3476 8.93351 10.681 9.3479 10.0142 10.0147C9.3477 10.6815 8.938 11.353 8.62846 12.1389C8.33326 12.901 8.12856 13.7726 8.07146 15.0538C8.01435 16.3302 8 16.7398 8 19.9976C8 21.3813 8.00264 22.2511 8.00996 22.8922C8.01991 23.7606 8.03866 24.2092 8.07146 24.9462C8.12856 26.2226 8.33326 27.0943 8.62846 27.8611C8.93332 28.6517 9.3477 29.3185 10.0142 29.9853C10.681 30.6521 11.3523 31.0617 12.138 31.3713C12.9 31.6666 13.7715 31.8714 15.0524 31.9285C16.3334 31.9857 16.7381 32 19.9999 32C23.2619 32 23.6666 31.9857 24.9476 31.9285C26.2238 31.8714 27.095 31.6666 27.8617 31.3713C28.6521 31.0665 29.319 30.6521 29.9855 29.9853C30.6523 29.3185 31.0617 28.647 31.3712 27.8611C31.6664 27.099 31.8714 26.2275 31.9285 24.9462C31.9857 23.665 32 23.2602 32 19.9976C32 16.735 31.9857 16.3302 31.9285 15.049C31.8714 13.7726 31.6664 12.901 31.3712 12.1341C31.0667 11.3435 30.6523 10.6767 29.9855 10.01C29.319 9.34314 28.6474 8.93351 27.8617 8.6239C27.1 8.32865 26.2285 8.12383 24.9476 8.06671C23.662 8.01428 23.2523 8 19.9952 8ZM19.9952 13.8392C16.5952 13.8392 13.8333 16.5969 13.8333 20.0024C13.8333 23.4078 16.5905 26.1655 19.9952 26.1655C23.3999 26.1655 26.157 23.4078 26.157 20.0024C26.157 16.5969 23.3999 13.8392 19.9952 13.8392ZM19.9952 23.9984C17.7856 23.9984 15.9951 22.2076 15.9951 19.9976C15.9951 17.7877 17.7856 15.9968 19.9952 15.9968C22.2047 15.9968 23.9952 17.7877 23.9952 19.9976C23.9952 22.2076 22.2047 23.9984 19.9952 23.9984ZM27.838 13.5916C27.838 14.386 27.1943 15.0299 26.4001 15.0299C25.6059 15.0299 24.9619 14.386 24.9619 13.5916C24.9619 12.7971 25.6059 12.1532 26.4001 12.1532C27.1943 12.1532 27.838 12.7971 27.838 13.5916Z" fill="white"></path>
+							</svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/minecraft/">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" role="presentation">
+						<rect width="40" height="40" rx="20" fill="#262423"></rect>
+						<path d="M27.8861 25.8641L28.7671 20.1165H23.2557V16.3883C23.2557 14.8155 24.0242 13.2816 26.4927 13.2816H29V8.38835C29 8.38835 26.7256 8 24.5521 8C20.011 8 17.0457 10.7534 17.0457 15.7359V20.1165H12V25.8641H17.0457V39.7592C18.0587 39.9184 19.095 40 20.1507 40C21.2064 40 22.2427 39.9184 23.2557 39.7592V25.8641H27.8861Z" fill="white"></path>
 					</svg>
-			</a>
-	</li>
-	<li><!-- instagram -->
-		<a href="https://www.instagram.com/minecraft/" >
-				<svg xmlns="http://www.w3.org/2000/svg">
-				</svg>
-		</a>
-</li>
-<li><!-- facebook -->
-	<a href="https://www.facebook.com/minecraft/" >
-			<svg xmlns="http://www.w3.org/2000/svg">
-			</svg>
-	</a>
-</li>
-<li><!-- twitter -->
-	<a href="https://www.x.com/minecraft/" >
-			<svg xmlns="http://www.w3.org/2000/svg">
-			</svg>
-	</a>
-</li>
-<li><!-- tiktok -->
-	<a href="https://www.tiktok.com/@minecraft" >
-			<svg xmlns="http://www.w3.org/2000/svg">
-			</svg>
-	</a>
-</li>
-<li><!-- whatsapp -->
-	<a href="https://www.whatsapp.com/channel/0029VakYS0uKLaHg2yxV2T1p" >
-			<svg xmlns="http://www.w3.org/2000/svg">
-			</svg>
-	</a>
-</li>
-<li><!-- discord -->
-	<a href="https://discord.com/invite/minecraft" >
-			<svg xmlns="http://www.w3.org/2000/svg">
-			</svg>
-	</a>
-</li>
-<li><!-- spotify -->
-	<a href="https://open.spotify.com/artist/7i68fmsIERvgavI8Q1H09h?trackId=6rjuKpPydT2SxN15TZpV7r" >
-			<svg xmlns="http://www.w3.org/2000/svg">
-			</svg>
-	</a>
-</li>
-	</ul>
-
+							</a>
+						</li>
+						<li>
+							<a href="https://x.com/Minecraft">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" role="presentation">
+	<rect width="40" height="40" rx="20" fill="#262423"></rect>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M21.9,18.5l7.3-8.5h-1.7l-6.3,7.4-5.2-7.4h-5.8l7.6,11.1-7.6,8.9h1.7l6.7-7.8,5.4,7.8h5.8l-7.9-11.5ZM19.5,21.2l-.8-1.1-6.2-8.8h2.7l5,7.1.8,1.1,6.5,9.2h-2.7l-5.3-7.5Z" fill="#fff"></path>
+							</svg>
+							</a>
+						</li>
+						<li>
+								<a href="https://www.tiktok.com/@minecraft" >
+									<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" role="presentation">
+	<rect width="40" height="40" rx="20" fill="#262423"></rect>
+	<path d="M20,0h0c11.05,0,20,8.95,20,20h0c0,11.05-8.95,20-20,20h0C8.95,40,0,31.05,0,20h0C0,8.95,8.95,0,20,0Z"></path>
+	<path d="M27.03,13.12c-1.24-.81-2.13-2.1-2.41-3.6-.06-.33-.09-.66-.09-1h-3.95v15.84c-.07,1.77-1.53,3.2-3.32,3.2-.56,0-1.08-.14-1.54-.38-1.06-.56-1.78-1.66-1.78-2.94,0-1.83,1.49-3.32,3.32-3.32.34,0,.67.06.98.15v-4.03c-.32-.04-.65-.07-.98-.07-4.01,0-7.27,3.26-7.27,7.27,0,2.46,1.23,4.64,3.1,5.95,1.18.83,2.62,1.32,4.17,1.32,4.01,0,7.27-3.26,7.27-7.27v-8.03c1.55,1.11,3.45,1.77,5.5,1.77v-3.95c-1.1,0-2.13-.33-2.99-.89Z" style="fill: #fff;"></path>
+									</svg>
+								</a>
+						</li>
+						<li>
+							<a href="https://aka.ms/MCWhatsApp">
+								<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" role="presentation">
+								<rect width="40" height="40" rx="20" fill="#262423"></rect>
+								<path d="M20,0h0c11.05,0,20,8.95,20,20h0c0,11.05-8.95,20-20,20h0C8.95,40,0,31.05,0,20h0C0,8.95,8.95,0,20,0Z"></path>
+								<path d="M28.61,11.33c-2.29-2.29-5.33-3.55-8.56-3.55-6.68,0-12.11,5.43-12.11,12.11,0,2.14.56,4.22,1.62,6.05l-1.72,6.28,6.42-1.68c1.77.96,3.76,1.47,5.79,1.47h0c6.67,0,12.11-5.43,12.11-12.11,0-3.24-1.26-6.28-3.54-8.56h0ZM20.05,29.96h0c-1.81,0-3.58-.48-5.12-1.4l-.37-.22-3.81,1,1.02-3.71-.24-.38c-1.01-1.61-1.54-3.45-1.54-5.35,0-5.55,4.51-10.06,10.07-10.06,2.69,0,5.22,1.05,7.11,2.95,1.9,1.9,2.95,4.43,2.94,7.12,0,5.55-4.51,10.06-10.06,10.06h0ZM25.57,22.42c-.3-.15-1.79-.88-2.07-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96,1.19-.18.2-.35.23-.66.08s-1.28-.47-2.43-1.5c-.9-.8-1.51-1.8-1.68-2.1-.18-.3-.02-.47.13-.62.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.64-.93-2.25-.24-.59-.5-.51-.68-.52-.18,0-.38-.01-.58-.01s-.53.08-.81.38c-.28.3-1.06,1.04-1.06,2.52s1.08,2.93,1.24,3.13c.15.2,2.14,3.26,5.17,4.57.72.31,1.28.5,1.72.64.73.23,1.38.2,1.91.12.58-.09,1.79-.73,2.04-1.44.25-.71.25-1.31.18-1.44s-.28-.2-.58-.35h0Z" style="fill: #fff; fill-rule: evenodd;"></path>
+								</svg>
+							 </a>
+						</li>
+						<li>
+						 <a href="https://discord.gg/minecraft">
+							<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" role="presentation">
+							<rect width="40" height="40" rx="20" fill="#262423"></rect>
+							<path d="M20,0h0c11.05,0,20,8.95,20,20h0c0,11.05-8.95,20-20,20h0C8.95,40,0,31.05,0,20h0C0,8.95,8.95,0,20,0Z"></path>
+							<g id="_图层_2">
+							<g id="Discord_Logos">
+								<g id="Discord_Logo_-_Large_-_White">
+									<path d="M29.02,11.8c-1.72-.78-3.52-1.33-5.36-1.66-.25.45-.49.92-.7,1.39-1.96-.31-3.99-.31-5.95,0-.2-.47-.43-.94-.7-1.39-1.86.31-3.66.88-5.36,1.66-3.4,5.03-4.32,9.92-3.85,14.75h0c1.98,1.47,4.19,2.6,6.57,3.31.53-.72,1-1.47,1.41-2.27-.78-.29-1.51-.63-2.23-1.06.18-.14.37-.27.55-.41,4.17,1.96,9,1.96,13.15,0,.18.14.37.29.55.41-.72.41-1.45.78-2.23,1.06.41.8.88,1.55,1.41,2.27,2.37-.72,4.6-1.84,6.59-3.29h0c.53-5.6-.92-10.45-3.87-14.77ZM15.67,23.58c-1.29,0-2.35-1.17-2.35-2.6s1.02-2.6,2.33-2.6,2.37,1.17,2.35,2.6-1.02,2.6-2.33,2.6ZM24.32,23.58c-1.29,0-2.33-1.17-2.33-2.6s1.02-2.6,2.33-2.6,2.35,1.17,2.33,2.6-1.02,2.6-2.33,2.6Z" style="fill: #fff;"></path>
+								</g>
+							</g>
+							</g>
+							</svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://open.spotify.com/artist/7i68fmsIERvgavI8Q1H09h?si=W8eaFDQWRbKHzSIaa4FSyQ">
+								<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" role="presentation">
+								<rect width="40" height="40" rx="20" fill="#262423"></rect>
+								<path d="M20,0h0c11.05,0,20,8.95,20,20h0c0,11.05-8.95,20-20,20h0C8.95,40,0,31.05,0,20h0C0,8.95,8.95,0,20,0Z"></path>
+								<g id="_Spotify_Logo">
+								<g id="Spotify_Logos">
+									<g id="Spotify_Logo_-_Large_-_White">
+								<path d="M19.52,7.71c5.93-.24,11.21,3.86,12.49,9.63,1.59,7.18-3.43,14.14-10.71,14.9-7.75.81-14.28-5.63-13.54-13.4.58-6.14,5.61-10.87,11.76-11.12ZM16.79,14.54c-1.14.03-2.3.13-3.43.32-.31.05-.78.11-1.07.23-.9.36-.99,1.61-.16,2.1.46.27.84.12,1.31.05,4.6-.76,9.04-.23,13.28,1.75.64.3,1.21.79,1.93.35.61-.37.75-1.21.29-1.76-.23-.27-.78-.51-1.11-.67-3.37-1.61-7.3-2.47-11.03-2.36ZM16.66,18.8c-.82.03-1.67.11-2.49.24-.38.06-1.15.17-1.45.35-.67.41-.54,1.45.2,1.71.37.13,1-.08,1.39-.15,3.67-.62,7.54-.08,10.9,1.53.57.27,1.11.76,1.74.38.59-.36.61-1.2.04-1.6-.27-.19-.78-.41-1.09-.56-2.86-1.34-6.09-2.01-9.25-1.9ZM16.9,22.6c-.99.03-2.48.15-3.42.46-.61.2-.74.94-.21,1.32.31.22.59.09.91.02,3.33-.66,6.65-.33,9.71,1.17.24.12.79.48,1,.51.55.09.98-.38.87-.92-.06-.3-.41-.48-.65-.62-2.42-1.33-5.44-2.05-8.2-1.96Z" style="fill: #fff;"></path>
+										</g>
+									</g>
+								</g>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</section>
+	
+	<section> <!-- alle linkjes -->
+		<ul class="footer-sections">
+			
+				<li>
+					<h2>Games</h2>
+					<ul class="MC_link_list">
+						<li>
+							<a href="https://www.minecraft.net/en-us/">
+								Minecraft
+							</a>
+						</li>    
+						<li>
+							<a href="https://www.minecraft.net/en-us/about-dungeons">
+								Minecraft Dungeons
+							</a>
+						</li>
+						<li>
+							<a href="https://www.minecraft.net/en-us/about-legends">
+								Minecraft Legends
+							</a>
+						</li>
+						<li>
+							<a href="https://education.minecraft.net">
+								Minecraft Education
+							</a>
+						</li>
+					</ul>
+				</li>
+	
+				<li>
+					<h2>Community</h2>
+					<ul class="MC_link_list">
+						<li>
+							<a href="https://www.minecraft.net/en-us/">
+								Creator Learning Portal
+							</a>
+						</li>  
+						<li>
+							<a href="https://www.minecraft.net/en-us/about-dungeons">
+								Mojang Studios Careers
+							</a>
+						</li>
+						<li>
+							<a href="https://www.minecraft.net/en-us/about-legends">
+								Build a Better World
+							</a>
+						</li>
+						<li>
+							<a href="https://education.minecraft.net">
+								A Minecraft Movie
+							</a>
+						</li>
+					</ul>
+				</li>
+	
+				<li>
+					<h2>Shop</h2>
+					<ul class="MC_link_list">
+						<li>
+							<a href="https://www.minecraft.net/en-us/">
+								Marketplace
+							</a>
+						</li>    
+						<li>
+							<a href="https://www.minecraft.net/en-us/about-dungeons">
+								Minecraft Shop
+							</a>
+						</li>
+					</ul>
+				</li>
+	
+				<li>
+					<h2>Support</h2>
+					<ul class="MC_link_list">
+						<li>
+							<a href="https://www.minecraft.net/en-us/">
+								Tips for Beginners
+							</a>
+						</li>    
+						<li>
+							<a href="https://www.minecraft.net/en-us/about-dungeons">
+								Help
+							</a>
+						</li>
+						<li>
+							<a href="https://www.minecraft.net/en-us/about-legends">
+								Feedback
+							</a>
+						</li>
+						<li>
+							<a href="https://education.minecraft.net">
+								Site Map
+							</a>
+						</li>
+						<li>
+							<a href="https://education.minecraft.net">
+								Download
+							</a>
+						</li>
+						<li>
+							<a href="https://education.minecraft.net">
+								Contact Us
+							</a>
+						</li>
+					</ul>
+				</li>
+	
+				<li>
+					<h2>Account</h2>
+					<ul class="MC_link_list">
+						<li>
+							<a href="https://www.minecraft.net/en-us/">
+								Profile
+							</a>
+						</li>    
+						<li>
+							<a href="https://www.minecraft.net/en-us/about-dungeons">
+								Redeem
+							</a>
+						</li>
+					</ul>
+				</li>
+	
+				<li>
+						<img src="images/parental.svg" alt="ESRB Everyone 10+ rating">
+				</li>
+			</ul>
+	
+			<ul class="footer_bottom">
+				<li>
+					<section class="footer_logos">
+							<img src="images/Mojang2020Logo.png" alt="Mojang Studios logo">
+							<img src="images/Logo_Xbox_Game_Studio.png" alt="Xbox Game Studios logo">
+					</section>
+				</li>
+				
+				<li>
+					<section class="footer_legal">
+						<p>© 2025 Mojang AB. TM Microsoft Corporation.</p>
+							<ul>
+								<li>
+									<a href="#">
+										Minecraft Usage Guidelines
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Manage Consent
+									</a>
+								</li>
+							</ul>
+					</section>
+				</li>
+			</ul>
+	
+			
+	</section>
+	
+	
 	</footer>
 
-	<script defer src="scripts/script.js"></script>
+	<script src="scripts/script.js"></script>
 </body>
 	
 </html>
