@@ -1220,6 +1220,12 @@ flex-direction: row;
 	align-self: center;
 	padding: 24px 20px;
 }
+@media(width >30em){
+	.mrkt_logo{
+		margin-left: 17.5em;
+	}
+}
+
 .market_landpagina{
 	background: linear-gradient(0deg, #594922 6%, #644a21 30%, #433522 53%, #222120);
 	background-color: #a18037;
@@ -1438,8 +1444,14 @@ width: 100%;
 			position: relative;
 			top: 1px
 	}
+	
 }
-
+@media(width >30em){
+	.MC_category_item{
+		padding: 32px;
+		margin-left: 2em;
+	}
+}
 
 /*****************************************************************************/
 /*************************** Carousels marketplace ***************************/
