@@ -13,6 +13,25 @@
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+
+@font-face {
+	font-family: 'Minecraft';
+	src: url('/fonts/Minecraft.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'minecraftseven';
+	src: url('/fonts/minecraftseven.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body {
+    font-family: sans-serif;
+}
+
 :root {
 	--header-h: 80px;
 	--color-text:#111;
@@ -21,6 +40,7 @@
 	--mc-core-white: #fff;
 	--mc-core-green: #3c8527;
 	--mc-core-green-2: #81cd60;
+	--mc-background-main:#171615;
 	--mc-market-grey:#171615;
 	--mc-market-grey-2: #262423;
 	--mc-search_icon: url(images/search_icon.jpg);
@@ -31,12 +51,40 @@
 	--mc-base-shadow: inset -4px 4px 0 0 rgba(0,0,0,.3),inset 4px -4px 0 0 #3d3938;
 
 
+	/* svg's, maar heb deze voor mijn eigen begrijpen maar in de html gezet..
 	--mc-arrow-groot: polygon(50% 5%, 40% 5%, 40% 15%, 30% 15%, 30% 25%, 20% 25%, 20% 35%, 10% 35%, 10% 45%, 0% 45%, 0%
 	0%
 	 55%, 10% 55%, 10% 65%, 20% 65%, 20% 75%, 30% 75%, 30% 85%, 40% 85%, 40% 95%, 50% 95%, 50% 85%, 40% 85%, 40% 75%, 30% 75%, 30% 65%, 20% 65%, 20% 55%, 100% 55%, 100% 45%, 20% 45%, 20% 35%, 30% 35%, 30% 25%, 40% 25%, 40% 15%, 50% 15%, 50% 5%);
-	/* --mc-add-on-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H0V8H2H4H6V10V16H8H10H12V10V8V6H14H16V4V2H14V0H10H6H4H2ZM14 2V4H12V6H10V8V10H8V8V6H6V2H10H14ZM4 6H2V2H4V6Z" fill="%23EDE5E2"/></svg>'); */
+	
+	--mc-arrow-right: polygon(0% 0%,0% 25%,14.286% 25%,14.286% 50%,28.572% 50%,28.572% 75%,42.858% 75%,42.858% 100%,57.142% 100%,57.142% 75%,71.428% 75%,71.428% 50%,85.714% 50%,85.714% 25%,100% 25%,100% 0%,85.714% 0%,85.714% 25%,71.428% 25%,71.428% 50%,57.142% 50%,57.142% 75%,42.858% 75%,42.858% 50%,28.572% 50%,28.572% 25%,14.286% 25%,14.286% 0%);
+		--mc-drop-pijl: polygon(
+    25% 12.5%,
+    37.5% 12.5%,
+    37.5% 25%,
+    50% 25%,
+    50% 37.5%,
+    62.5% 37.5%,
+    62.5% 50%,
+    50% 50%,
+    50% 62.5%,
+    37.5% 62.5%,
+    37.5% 75%,
+    25% 75%,
+    25% 62.5%,
+    25% 25%
+  ); */
 
 	--mc-text-grey: #d0c5c0;
+	--mc-vanilla-coldgrey-3: #5D647A;
+
+	--mc-font-main: 'Minecraft', sans-serif;
+	--mc-font-second:'minecraftseven', sans-serif; 
+
+	--mc-playtype-border-1:#956B49;
+	--mc-playtype-border-2:#6345BD;
+	--mc-playtype-border-3:#006CEF;
+
+
 }
 
 
@@ -58,6 +106,7 @@
 	
 		body{
 			margin:0;
+			background-color: var(--mc-background-main);
 		}
 
 		main {
@@ -70,9 +119,7 @@
 			list-style-type:"";
 		}
 	
-		li {
-			display:grid;
-		}
+		
 	
 		img {
 			grid-area:1/1;
@@ -197,7 +244,7 @@ nav {
 
 /* logo */
 .MC_nav_logo {
-  height: 75px;
+  height: 25px;
   width: auto;
 }
 
@@ -253,45 +300,87 @@ nav {
 }
 
 
-/* begin voor responsive
-
 
 /**************************************************************************/
 /**************************************************************************/
 /****************************** HOOFDPAGINA *******************************/
 /**************************************************************************/
 /**************************************************************************/
-/* section 0: */
+
+/******************************* SECTION 1 *******************************/
 
 .landpagina{
 	position: relative;
+	margin-top: var(--header-h);
+	background-image: var(--mc-background-video);
+}@media (width > 30em) {
+	.landpagina {
+		margin-bottom: 90em;
+	}
 }
 
 .MC_Heading_1 {
-	text-align: center;
-	border: none;
-	max-width: 5em;
+
+	font-size: 3em;
 	color: var(--mc-core-white);
-	font-family: var(--mc-vanilla-fontlist);
+	font-family: var(--mc-font-main);
+	line-height: .9;
+	margin: 1em 1em;
+	padding: 50px 0 0 0 ;
+
 	text-shadow: var(--mc-vanilla-coldgrey-3) 0 4px;
+	word-wrap: normal;
+	left: 50%;
+	text-align: center;
+	width: 80vw;
+	position: sticky;
+
+} @media (width > 30em) {
+	.MC_Heading_1 {
+		font-size: 5em;
+	}
 }
 
 .scroll_button {
-    background: #7345e5;
-    box-shadow: inset 0 -6px 0 #4a1cac, inset 0 6px 0 #a163f2;
-    color: var(--mc-core-white);
-    font-weight: 800;
-    letter-spacing: .03em;
+	background: #7345e5;
+	box-shadow: inset 0 -6px 0 #4a1cac, inset 0 6px 0 #a163f2;
+	font-weight: 800;
+	font-size: 1.1em;
+	letter-spacing: .03em;
+	left: 50%;
+
+	position: absolute;
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	padding: 0em 1em;
+
+} @media (width > 30em) {
+	.scroll_button {
+		font-size: 1.3em;
+		
+	}
 }
 
-.scroll_button span {
+.scroll_button p {
 	color: var(--mc-core-white);
 	font-weight: 800;
-	letter-spacing: .03em;
+	text-transform: uppercase;
+}
+
+.scroll_button svg {
+	fill: var(--mc-core-white);
 }
 
 .MC_Animation_toggle{
 	visibility: hidden;
+}
+
+.MC_Animation_toggle:hover{
+	visibility: visible;
 }
 
 #background_video {
@@ -300,11 +389,165 @@ nav {
   right: 0;
 	width: 100%;
   min-height: 100%;
+	background-color: var(--mc-background-main);
+}
+
+/******************************* SECTION 2 *******************************/
+
+.MC_Heading_2 {
+	color: var(--mc-core-white);
+	padding-top: 64px;
+  margin-bottom: 1em;
+	font-family: var(--mc-font-main);
+	font-size: 2rem;
+	line-height: 2rem;
+	text-align: center;
+}
+
+.MC_platforms {
+	background-color: var(--mc-background-main);
+	margin-top: 300px;
+}@media (width > 30em){
+	.MC_Heading_2{
+		margin-left: 25%;
+	}
+}
+
+.MC_platforms button{
+	background-color: var(--mc-background-main);
+	color: var(--mc-core-white);
+	font-family: var(--mc-font-second);
+	width: 165px;
+	margin-left: -1em;
+	padding: 16px;
+}
+.MC_platforms button:nth-of-type(1){
+	margin-left: 15%;
+}@media (width > 30em){
+	.MC_platforms button:first-of-type{
+		margin-left: 35em;
+	}
+}
+.MC_platforms p:first-of-type{
+	padding: 32px;
+}
+.MC_platforms p {
+	color: var(--mc-core-white);
+	text-align: center;
+}
+	.MC_platforms p:nth-of-type(2){
+		color: hotpink;
+	}@media (width > 30em){
+		.MC_platforms p:first-of-type{
+			padding: 64px;
+			font-size: 1.1em;
+		}
+	}
+
+
+/******************************* SECTION 3 *******************************/
+
+.purchase_menu{
+	background-color: var(--mc-background-main);
+	text-transform: uppercase;
+	margin-bottom: 4em;
+}
+
+.purchase_menu a:not(:first-child){
+	display: flex;
+	align-items: center;
+}
+
+.MC_PurchaseMenu{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1em;
+	margin-left: 1em;
+	padding: 16px 16px 16px 16px;
+	border-top: 1px solid var(--mc-vanilla-coldgrey-3);
+	color: var(--mc-core-white);
+}
+.MC_PurchaseMenu img{
+	width: 30px;
+	height: 30px;
+}
+.MC_PurchaseMenu a{
+	color: var(--mc-core-white);
+	text-decoration: none;
+}
+.MC_PurchaseMenu:last-of-type{
+	border-bottom: 1px solid var(--mc-vanilla-coldgrey-3);
+}
+
+.MC_buynow_btn{
+	display: inline-flex;
+  align-items: center;
+  margin-left: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  background-color: transparent;
+}@media (width > 30em){
+	.MC_buynow_btn{
+		margin-left: 50em;
+	}
+}
+.MC_buynow_btn p{
+	border: 2px solid var(--mc-core-white);
+	color: var(--mc-core-white);
+
+	padding: 10px 10px 10px 10px;
+	margin: 0;
+	display: inline-flex;
+	align-items: center;
+
 }
 
 
-/* 1. Carousel */
 
+/******************************* SECTION 4 *******************************/
+
+.section_discover{
+	color: var(--mc-core-white);
+	text-align: center;
+	padding: 16px;
+}
+
+.section_discover h2{
+	font-size: 2em;
+	color: var(--mc-core-white);
+	font-family: var(--mc-font-main);
+}
+
+.section_discover p{
+	margin: 1em;
+}
+.section_discover p:nth-of-type(2){
+	text-align: left;
+}
+
+.section_discover div{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 16px;
+	gap: 1em;
+}
+
+.section_discover div svg{
+	fill: var(--mc-core-white);
+	width: 50px;
+}
+.section_discover div svg:first-of-type{
+	transform: rotate(270deg);
+}
+.section_discover div svg:last-of-type{
+	transform: rotate(90deg);
+	margin-right: 16px;
+}
+
+/* 1. Carousel */
 .carousel_discover_the_world {
 	display: flex;
 	overflow-x: auto;
@@ -313,45 +556,47 @@ nav {
 	overscroll-behavior-x:contain;
 	gap: 1em;
 	}
-	
-	li {
-	flex-basis: 70%;
-	flex-shrink: 0;
-	scroll-snap-align: center;
+.carousel_discover_the_world li {
+width: 200px;
+flex-shrink: 0;
+scroll-snap-align: center;
+}
 
-	}
-	.carousel_discover_the_world::scroll-button(*) {
-		/* styling voor de buttons */
-		width:3em;
-		height:3em;
-		margin:1em 0 0;
-		padding:0;
-		
-		background-color:canvas;
-		border:none;
-		border-radius:50%;
-		cursor:pointer;
+.carousel_discover_the_world .carouselitem.active {
+  border: 5px solid var(--mc-core-green-2);
+	border-style: inset;
+  /* transition: all 0.3s ease; */
+}
+
+/* oud, voor de originele scroll knoppen
+.carousel_discover_the_world::scroll-button(*) {
+	width:3em;
+	height:3em;
+	margin:1em 0 0;
+	padding:0;
 	
-		font-size:1em;
-		position:absolute;
-	}
-	
+	background-color:canvas;
+	border:none;
+	border-radius:50%;
+	cursor:pointer;
+
+	font-size:1em;
+	position:absolute;
+}
 	.carousel_discover_the_world::scroll-button(right) {
 		
 		content: '→' / 'Next';
 		right:clamp(1.5rem, 5vw, 2rem);
 		
 	}
-	
 	.carousel_discover_the_world::scroll-button(left) { 
 		content: '←' / 'previous';
 		left: clamp(1.5rem, 5vw, 2rem);
 	}
-		
 	.carousel_discover_the_world::scroll-button(*):disabled {
 		opacity:50%;
-	}
-	
+	} */
+
 	@media (width > 30em) {
 		.carousel_discover_the_world {
 	display: flex;
@@ -361,68 +606,75 @@ nav {
 	overscroll-behavior-x:contain;
 	gap: 1em;
 		}
+		.carousel_discover_the_world li {
+			width: 300px;
+			}
 	}
 
+/******************************* SECTION 5 *******************************/
 
-	.carousel_discover_the_world {
+.how_minecraft{
+	background-color: var(--mc-core-white);
+	color: var(--color-text);
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+}
+
+.how_minecraft ul{
+	margin: 1em;
+	padding: 32px;
 	display: flex;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	overscroll-behavior-x:contain;
-	gap: 1em;
-	}
-	
-	li {
-	flex-basis: 70%;
-	flex-shrink: 0;
-	scroll-snap-align: center;
+	flex-direction: column;
+	gap: 0;
+}
+.how_minecraft li{
+	width: 100%;
+	justify-content: center;
+}
 
-	}
-	.carousel_discover_the_world::scroll-button(*) {
-		/* styling voor de buttons */
-		width:3em;
-		height:3em;
-		margin:1em 0 0;
-		padding:0;
-		
-		background-color:canvas;
-		border:none;
-		border-radius:50%;
-		cursor:pointer;
-	
-		font-size:1em;
-		position:absolute;
-	}
-	
-	.carousel_discover_the_world::scroll-button(right) {
-		
-		content: '→' / 'Next';
-		right:clamp(1.5rem, 5vw, 2rem);
-		
-	}
-	
-	.carousel_discover_the_world::scroll-button(left) { 
-		content: '←' / 'previous';
-		left: clamp(1.5rem, 5vw, 2rem);
-	}
-		
-	.carousel_discover_the_world::scroll-button(*):disabled {
-		opacity:50%;
-	}
-	
-	@media (width > 30em) {
-		.carousel_discover_the_world {
-	display: flex;
-	overflow: auto;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	overscroll-behavior-x:contain;
-	gap: 1em;
-		}
-	}
+.how_minecraft h2{
+	font-family: var(--mc-font-main);
+	color: var(--color-text);
+	padding-top: 64px;
+  margin-bottom: 1em;
+	margin-right: 17.5%;
+	line-height: 2rem;
+	text-align: center;
+}
+.how_minecraft h3{
+	font-family: var(--mc-font-second);
+	padding-top: 64px;
+  margin-bottom: 1em;
+	line-height: 2rem;
+	text-align: center;
+}
+.how_minecraft p{
+	text-align: center;
+	font-family: sans-serif;
+}
+.how_minecraft img{
+	width: 100%;
+	height: auto;
+}
 
+.how_minecraft svg{
+	fill: var(--mc-core-white);
+	margin-top: -4em;
+	background-color: var(--color-text);
+}
 
+@media (width > 30em) {
+	.how_minecraft ul {
+display: flex;
+flex-direction: row;
+	}
+	.how_minecraft h2{
+		margin-left: 0;
+		margin-right: 20em;
+	}
+}
+/******************************* SECTION 6 *******************************/
 /* 2. Carousel */
 
 .carousel_explore_gamemodes {
@@ -432,58 +684,295 @@ nav {
 	scroll-behavior: smooth;
 	overscroll-behavior-x:contain;
 	gap: 1em;
+	color: var(--mc-core-white);
+	text-align: center;
+	}
+	.carousel_explore_gamemodes h2 {
+		color: var(--mc-core-white);
+	}
+	.carousel_explore_gamemodes img{
+		width: 430px;
 	}
 	
-	li {
-	flex-basis: 70%;
+	.carousel_explore_gamemodes li {
+	flex-basis: 100%;
 	flex-shrink: 0;
 	scroll-snap-align: center;
-
-	}
-	.carousel_explore_gamemodes::scroll-button(*) {
-		/* styling voor de buttons */
-		width:3em;
-		height:3em;
-		margin:1em 0 0;
-		padding:0;
-		
-		background-color:canvas;
-		border:none;
-		border-radius:50%;
-		cursor:pointer;
-	
-		font-size:1em;
-		position:absolute;
-	}
-	
-	.carousel_explore_gamemodes::scroll-button(right) {
-		
-		content: '→' / 'Next';
-		right:clamp(1.5rem, 5vw, 2rem);
-		
-	}
-	
-	.carousel_explore_gamemodes::scroll-button(left) { 
-		content: '←' / 'previous';
-		left: clamp(1.5rem, 5vw, 2rem);
-	}
-		
-	.carousel_explore_gamemodes::scroll-button(*):disabled {
-		opacity:50%;
-	}
-	
-	@media (width > 30em) {
-		.carousel_explore_gamemodes {
 	display: flex;
-	overflow: auto;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	overscroll-behavior-x:contain;
-	gap: 1em;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	}
+
+
+.explore_gamemodes div{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 16px;
+		gap: 1em;
+	}
+	
+	.explore_gamemodes div svg{
+		fill: var(--mc-core-white);
+		width: 50px;
+	}
+	.explore_gamemodes div svg:first-of-type{
+		transform: rotate(270deg);
+	}
+	.explore_gamemodes div svg:last-of-type{
+		transform: rotate(90deg);
+		margin-right: 16px;
+	}
+	@media (width > 30em) {
+		.carousel_explore_gamemodes li {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+		}
+		.carousel_explore_gamemodes img {
+			width: 600px;
+		}
+		.carousel_explore_gamemodes li h2{
+			margin-left: 0;
+			margin-right: 24em;
+		}
+		.carousel_explore_gamemodes li p{
+			text-align: center;
+			width: 300px;
 		}
 	}
 
-	/* 3. Carousel */
+
+/******************************* SECTION 7 *******************************/
+	
+.all_play_types{
+	background-color: var(--mc-core-white);
+	color: var(--color-text);
+	text-align: center;
+	border-bottom: solid 1em var(--mc-core-white);
+} .all_play_types h2{
+	color: var(--color-text);
+} 
+@media (width > 30em) {
+	.all_play_types{
+		flex-wrap: wrap;
+		display: flex;
+	flex-direction: row;
+	} .all_play_types section:nth-child(3){
+		margin-left: 5em;
+	}
+	.all_play_types .MC_Heading_2 {
+		flex-basis: 100%;
+		margin-right: 10em;
+	}
+	.all_play_types p {
+		flex-basis: 100%;
+	}
+
+}
+
+
+.play_types{
+	background-color: var(--mc-core-white);
+	color: var(--color-text);
+	text-align: center;
+	border-bottom: solid 1em var(--mc-core-white);
+}
+
+.play_types img {
+	width: 350px;
+	height: auto;
+	margin-left: 2.5em;
+}
+
+.play_types section{
+	background: #FCF5F1;
+	max-width: 350px;
+	width: 100%;
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+	border: 16px solid var(--mc-playtype-border-1);
+	height: calc(100% - 180px);
+	min-height: 212px;
+	padding: 24px 17px;
+	position: relative;
+	margin-left: 2.5em;
+	text-align: left;
+}
+
+
+/******************************* dit is ook voor section 8 en 9 *******************************/
+
+.play_types section h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+	font-family: var(--mc-font-second);
+}
+
+.badge {
+	display: flex;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 0.1rem 0.4rem;
+  color: #333;
+}
+.badge svg{
+	width: 30px;
+}
+
+/* header achtig */
+.play_types section ul:first-of-type{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items:end;
+}
+
+/* inhoud */
+.play_types section ul:last-of-type {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.play_types section li {
+	margin-bottom: 1rem;
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	font-family: var(--mc-font-second);
+	
+}
+
+.tags p {
+	background: #EDE5E2;
+	border: 1px solid var(--mc-text-grey);
+	padding: 0.3rem 0.6rem;
+	font-size: 0.8rem;
+	box-shadow: 3px 3px var(--mc-text-grey);
+}
+
+.play_types section details {
+	border-top: 1px solid var(--mc-text-grey);
+	padding: 0.5rem 0;
+}
+
+.play_types section summary {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.play_types section details p {
+	margin: 0.5rem 0 0 1rem;
+	color: var(--mc-market-grey-2);
+}
+
+/******************************* SECTION 8 *******************************/
+
+.realms_play_type section{
+	background: #FCF5F1;
+	max-width: 350px;
+	width: 100%;
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+	border: 16px solid var(--mc-playtype-border-2);
+	height: calc(100% - 180px);
+	min-height: 212px;
+	padding: 24px 17px;
+	position: relative;
+	margin-left: 2.5em;
+	text-align: left;
+}
+
+/******************************* SECTION 9 *******************************/
+
+.local_play_type section{
+	background: #FCF5F1;
+	max-width: 350px;
+	width: 100%;
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+	border: 16px solid var(--mc-playtype-border-3);
+	height: calc(100% - 180px);
+	min-height: 212px;
+	padding: 24px 17px;
+	position: relative;
+	margin-left: 2.5em;
+	text-align: left;
+}
+
+
+/******************************* SECTION 10 *******************************/
+.all_games{
+	background-color: var(--mc-background-main);
+	color: var(--mc-core-white);
+	text-align: center;
+	padding: 1em;
+} 
+
+.all_games a {
+
+	background: var(--mc-core-green);
+	box-shadow: inset 0 -6px 0 #306413, inset 0 6px 0  #1cac21;
+	font-weight: 800;
+	letter-spacing: .03em;
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	width: 70%;
+	left: 50%;
+
+	position: absolute;
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5em;
+	text-decoration: none;
+	
+	border: 2px solid var(--mc-core-grey-6);
+
+	padding: 1rem 0.5rem;
+
+}@media (width > 30em) {
+	.all_games h2 {
+		margin-left: 13em;
+	}
+	.all_games{
+		margin-bottom: 10em;
+	}
+}
+
+.all_games a p {
+	color: var(--mc-core-white);
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.all_games a svg {
+	fill: var(--mc-core-white);
+	width:20px; 
+	height:20px;
+}
+
+/******************************* SECTION 11 *******************************/
+.expand_section {
+	background-color: var(--mc-core-green);
+	text-align: center;
+}
+.expand_section p {
+	color: var(--mc-core-white);
+}
+
+/* Carousel */
 
 .carousel_updates {
 	display: flex;
@@ -491,47 +980,60 @@ nav {
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 	overscroll-behavior-x:contain;
-	gap: 1em;
+	gap: 0;
 	}
 	
-	li {
+	.carousel_updates li {
 	flex-basis: 70%;
 	flex-shrink: 0;
 	scroll-snap-align: center;
+	color: var(--color-text);
+	background-color: var(--color-background);
+	margin: 2em 0.7em;
+	box-shadow: 0px 5px #2C661C;
+	
+	}
+	.carousel_updates h3{
+		font-size:1.5em;
+		font-weight: 600;
 
 	}
-	.carousel_updates::scroll-button(*) {
-		/* styling voor de buttons */
-		width:3em;
-		height:3em;
-		margin:1em 0 0;
-		padding:0;
-		
-		background-color:canvas;
-		border:none;
-		border-radius:50%;
-		cursor:pointer;
-	
-		font-size:1em;
-		position:absolute;
+	.carousel_updates p {
+		color: var(--color-text);
+		font-size: 1.2em;
+		margin: 1em;
+	}
+	.carousel_updates a {
+		color: var(--mc-core-green-2);
+		text-decoration: none;
+		margin: 1em;
+	}
+	.carousel_updates svg{
+		fill: var(--mc-core-green-2);
+		margin-bottom: -0.3em;
+	}
+
+	/* controls */
+	.expand_section div:last-of-type{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 16px;
+		gap: 1em;
 	}
 	
-	.carousel_updates::scroll-button(right) {
-		
-		content: '→' / 'Next';
-		right:clamp(1.5rem, 5vw, 2rem);
-		
+	.expand_section div:last-of-type svg{
+		fill: var(--mc-core-white);
+		width: 50px;
 	}
-	
-	.carousel_updates::scroll-button(left) { 
-		content: '←' / 'previous';
-		left: clamp(1.5rem, 5vw, 2rem);
+	.expand_section div:last-of-type svg:first-of-type{
+		transform: rotate(270deg);
 	}
-		
-	.carousel_updates::scroll-button(*):disabled {
-		opacity:50%;
+	.expand_section div:last-of-type svg:last-of-type{
+		transform: rotate(90deg);
+		margin-right: 16px;
 	}
-	
+
 	@media (width > 30em) {
 		.carousel_updates {
 	display: flex;
@@ -543,57 +1045,60 @@ nav {
 		}
 	}
 
+/******************************* SECTION 12 *******************************/
+
+.whats_new {
+	background-color: var(--mc-core-white);
+	color: var(--color-text);
+	text-align: center;
+	padding: 16px;
+}
+.whats_new h2 {
+	color: var(--color-text);
+
+}
+.whats_new a {
+	color: var(--mc-core-green-2);
+	text-decoration: none;
+	margin: 1em;
+	fill: var(--mc-core-green-2);
+}
+
+.whats_new ul p {
+	font-family: var(--mc-font-second);
+	background: var(--color-text);
+	color: var(--mc-core-white);
+	border: 1px solid var(--mc-text-grey);
+	font-size: 0.8rem;
+	box-shadow: 3px 3px var(--mc-text-grey);
+	width: 50px;
+	text-align: center;
+}
+
 /* 4. Carousel */
 
-.carousel_whats_new {
+.whats_new ul {
 	display: flex;
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
+	scroll-behavior:auto;
 	overscroll-behavior-x:contain;
-	gap: 1em;
+	gap: 7em;
+	margin: 32px;
 	}
-	
-	li {
+	.whats_new ul li a{
+		color: var(--mc-core-green);
+	}
+	.whats_new ul li {
 	flex-basis: 70%;
 	flex-shrink: 0;
 	scroll-snap-align: center;
+	margin-left: 20%;
+	font-weight: 400;
+	}
 
-	}
-	.carousel_whats_new::scroll-button(*) {
-		/* styling voor de buttons */
-		width:3em;
-		height:3em;
-		margin:1em 0 0;
-		padding:0;
-		
-		background-color:canvas;
-		border:none;
-		border-radius:50%;
-		cursor:pointer;
-	
-		font-size:1em;
-		position:absolute;
-	}
-	
-	.carousel_whats_new::scroll-button(right) {
-		
-		content: '→' / 'Next';
-		right:clamp(1.5rem, 5vw, 2rem);
-		
-	}
-	
-	.carousel_whats_new::scroll-button(left) { 
-		content: '←' / 'previous';
-		left: clamp(1.5rem, 5vw, 2rem);
-	}
-		
-	.carousel_whats_new::scroll-button(*):disabled {
-		opacity:50%;
-	}
-	
 	@media (width > 30em) {
-		.carousel_whats_new {
+		.whats_new ul {
 	display: flex;
 	overflow: auto;
 	scroll-snap-type: x mandatory;
@@ -603,8 +1108,69 @@ nav {
 		}
 	}
 
+	/* controls */
+	.whats_new div{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 16px;
+		gap: 1em;
+	}
+	
+	.whats_new div svg{
+		fill: var(--color-text);
+		width: 50px;
+	}
+	.whats_new div svg:first-of-type{
+		transform: rotate(270deg);
+	}
+	.whats_new div svg:last-of-type{
+		transform: rotate(90deg);
+		margin-right: 16px;
+	}
 
 
+/******************************* SECTION 13 *******************************/
+	.faq {
+		list-style: none;
+		padding: 16px;
+		margin: 16px;
+		text-align: left;
+		color: var(--mc-core-white);
+	}
+	.faq a {
+		color: var(--mc-core-green);
+	}
+	.faq li {
+		border-top: 1px solid #444;
+	}
+	
+	.faq details {
+		padding: 1rem 0;
+	}
+	
+	.faq summary {
+		cursor: pointer;
+		font-weight: bold;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.faq summary::after {
+		content: "▾";
+		transition: transform 0.2s;
+	}
+	
+	.faq details[open] summary::after {
+		transform: rotate(180deg);
+	}
+	
+	.faq p {
+		margin: 0.5rem 0 0;
+		line-height: 1.4;
+	}
 /**************************************************************************/
 /**************************************************************************/
 /****************************** MARKTPAGINA *******************************/
@@ -631,7 +1197,7 @@ nav {
 	background: linear-gradient(0deg, #594922 6%, #644a21 30%, #433522 53%, #222120);
 	background-color: #a18037;
 	Border: none;
-	margin-top: 5em;
+	margin-top: var(--header-h);
 }
 
 .market_landpagina p{
@@ -994,19 +1560,197 @@ width: 100%;
 		}
 	}
 
+/******************************************************/
+/******************************************************/
+/*********************** FOOTER ***********************/
+/******************************************************/
+/******************************************************/
+	
+
+	.MC_Heading_5{
+		text-align: center;
+		width: 100%;
+	}
+
+	footer h2 {
+		color: var(--mc-core-white);
+	}
+
 	.footer_socials{
 		display: flex;
 		flex-wrap: wrap;
+		margin: 23px 50px;
+		gap: 2em;
 		justify-content: center;
-		list-style-type: none;
-		margin-top: 23px;
-		padding: 0;
+	}
+	.footer_socials li{
+		max-width: 40px;
 	}
 
-	.MC_Footer li {
-		width: 40px;
+	/*********** Section 2 oud ************/
+	/* oude versie, bewaard voor waardes en margins etc
+	.MC_Footer section:nth-of-type(2){
+		padding: 64px 16px;
+	}
+	.MC_Heading_6{
+		color: var(--mc-core-white);
+		margin-left: 1em;
+	}
+	.MC_games_list{
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		margin-left: 2em;
 	}
 
-	.footer_icon {
-		width: 40px;
+	.MC_games_list li {
+		width: 170px;
 	}
+	.MC_games_list a{
+		text-decoration: none;
+		color: var(--mc-core-green-2);
+
+	} */
+
+	/*********** Section 2 ************/
+.MC_Footer {
+	background-color: #121212;
+	color: white;
+	font-family: sans-serif;
+	padding: 2rem;
+}
+
+.MC_Footer a {
+	color: var(--mc-core-green-2);
+	text-decoration: none;
+	font-size: 0.95rem;
+}
+
+.MC_Footer a:hover {
+	text-decoration: underline;
+}
+
+.MC_Footer h2 {
+	color: white;
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.footer-sections {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 1.5rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.MC_link_list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.MC_link_list li {
+	margin-bottom: 0.4rem;
+}
+
+/* Onderste deel */
+.footer_bottom {
+	list-style: none;
+	margin-top: 3rem;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.footer_logos {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.footer_logos img {
+	height: 80px;
+	object-fit: contain;
+}
+
+.footer_legal {
+	font-size: 0.8rem;
+	color: var(--mc-text-grey);
+	padding:32px;
+}
+
+.footer_legal ul {
+	list-style: none;
+	padding: 0;
+	margin-top: 0.5rem;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	justify-content: start;
+}
+.footer_legal p{
+	text-align: center;
+	color: var(--mc-text-grey);
+}
+
+.footer_legal a {
+	color: var(--mc-core-green-2);
+	font-size: 0.8rem;
+	text-align: center;
+}
+
+@media (width > 30em){
+	 h2{
+		margin-left: 25%;
+	}
+}
+	/* .MC_Footer section:nth-of-type(2){
+
+			padding: 2rem;
+		}
+		.MC_Footer section:nth-of-type(2) a{
+			color: var(--mc-core-green-2);
+		}
+		footer a:hover {
+			text-decoration: underline;
+		}
+		footer a {
+			text-decoration: none;
+		}
+		
+		.footer-sections {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+			gap: 2rem;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.MC_link_list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.MC_games_list li {
+			margin: 0.25rem 0;
+		}
+
+		.footer_bottom{
+			gap: 2rem;
+			list-style: none;
+			margin-top: 3em;
+			padding: 0;
+		}
+
+		.footer_logos{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			gap: 1em;
+		}
+		 */
